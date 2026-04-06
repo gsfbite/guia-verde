@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Verde | Beterraba</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/navbar.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-leaf"></i>
+                Guia Verde
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link active" href="../../../index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../pages/navbar/sobre.html">Sobre</a></li>
+                </ul>
+                <form class="d-flex" role="search" onsubmit="buscar(event)">
+                    <input id="campoBusca" class="form-control me-2" type="search"
+                        placeholder="O que procura?" aria-label="Pesquisar">
+                    <button class="btn btn-warning" type="submit">Pesquisar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-4">
+
+        <div class="d-flex mb-3">
+            <button type="button" onclick="history.back()" class="btn btn-secondary">
+                <i class="bi bi-arrow-left"></i> Voltar
+            </button>
+            <a href="../../../index.html" class="btn btn-success ms-auto">
+                Página Inicial
+            </a>
+        </div>
+
+        <!-- Cabeçalho da Cultura -->
+        <div class="card mb-4 border-0 shadow-sm">
+            <div class="row g-0 align-items-center">
+                <div class="col-12 col-md-8">
+                    <div class="card-body">
+                        <h2 class="card-title">Beterraba (<em>Beta vulgaris</em> L.)</h2>
+                        <p class="card-text">
+                            A beterraba é uma das principais hortaliças cultivadas no Brasil, com diversos biótipos.
+                            A beterraba hortícola — também chamada de beterraba vermelha ou de mesa — é o biótipo
+                            cultivado no país. Suas raízes e folhas são utilizadas na alimentação humana e a cor
+                            vermelho-arroxeada característica deve-se às betalaínas, pigmentos naturais antioxidantes
+                            com crescente valor nutricional e industrial.
+                        </p>
+                        <h2>Descrição</h2>
+                        <p>
+                            Planta herbácea de ciclo anual ou bianual, com sistema radicular pivotante que pode
+                            atingir até 60 cm de profundidade. Desenvolve raiz do tipo tuberosa púrpura pelo
+                            intumescimento do hipocótilo (caule localizado logo abaixo dos cotilédones). A coloração
+                            vermelho-escura típica das cultivares comerciais deve-se ao pigmento betalaínas, cor
+                            presente também nas nervuras e nos pecíolos das folhas.
+                        </p>
+                        <h2>Principais Características:</h2>
+                        <ul>
+                            <li><strong>Nome científico:</strong> <em>Beta vulgaris</em> L.</li>
+                            <li><strong>Família botânica:</strong> Chenopodiaceae.</li>
+                            <li><strong>Origem:</strong> Sul e leste da Europa e norte da África.</li>
+                            <li><strong>Hábito de crescimento:</strong> Herbácea; raiz pivotante até 60 cm de profundidade, com poucas ramificações laterais.</li>
+                            <li><strong>Folhas/Pecíolos:</strong> Largas, pecioladas, com nervuras e pecíolos de coloração avermelhada.</li>
+                            <li><strong>Flor:</strong> Pequena, hermafrodita, agrupada em espigas na fase reprodutiva.</li>
+                            <li><strong>Fruto (semente):</strong> Glomérulo (fruto botânico multigérmico) com 2 a 6 embriões; 55–60 sementes por grama.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <img src="../../img/culturas-intro/cultivo-beterraba.webp"
+                        class="img-fluid h-100 w-100 object-fit-cover"
+                        alt="Raiz de beterraba cortada ao meio mostrando polpa vermelha intensa">
+                </div>
+            </div>
+        </div>
+
+        <!-- Variedades Recomendadas -->
+        <section class="card mb-4">
+            <div class="card-body">
+                <h3 class="h4 mb-3">Variedades Recomendadas</h3>
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle border">
+                        <thead class="table-success">
+                            <tr>
+                                <th>Cultivar / Híbrido</th>
+                                <th>Empresa</th>
+                                <th>Destaque Técnico</th>
+                                <th>Ciclo (dias)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Early Wonder 2000</strong></td>
+                                <td>Agristar</td>
+                                <td>Ciclo precoce, raízes uniformes, boa resistência a chuva. Folhagem verde intensa e ótima sanidade.</td>
+                                <td>70 – 80</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Fortuna</strong></td>
+                                <td>Agristar</td>
+                                <td>Alto potencial produtivo, raízes uniformes, ótima coloração interna e externa, inserção foliar pequena.</td>
+                                <td>75 – 85</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Stays Green</strong></td>
+                                <td>Agrocinco</td>
+                                <td>Folhagem verde-escura brilhante (40–45 cm); baixa presença de anéis brancos; alta tolerância à cercosporiose.</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Katrina</strong></td>
+                                <td>Feltrin</td>
+                                <td>Globular (8–10 cm); excelente uniformidade; sementes descortiçadas e calibradas.</td>
+                                <td>60 – 70</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Tall Top Early Wonder</strong></td>
+                                <td>Feltrin</td>
+                                <td>Globular (8–10 cm); excelente adaptação a diversas regiões de cultivo.</td>
+                                <td>60 – 70</td>
+                            </tr>
+                            <tr>
+                                <td><strong>All Green</strong></td>
+                                <td>Hortec</td>
+                                <td>Alta resistência à cercosporiose; folhas verdes no ponto de colheita; cor vermelho intenso interno e externo.</td>
+                                <td>60 – 80</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Itapuã</strong></td>
+                                <td>ISLA / Horticeres</td>
+                                <td>Desenvolvida no Brasil; pele lisa; baixa incidência de anéis brancos; resistente à cercosporiose.</td>
+                                <td>60 – 75</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Maravilha</strong></td>
+                                <td>ISLA</td>
+                                <td>Alta produtividade; pouca incidência de anéis brancos; fácil formação de maços para comercialização.</td>
+                                <td>65 – 80</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Modana</strong></td>
+                                <td>Tecnoseed</td>
+                                <td>Monogérmica; 11–13 °Brix — ideal para indústria; melhor desempenho no inverno.</td>
+                                <td>55 – 65</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Bonel</strong></td>
+                                <td>Vilmorin</td>
+                                <td>Cultivar rústica; pele lisa e brilhante; ausência de anéis brancos; boa tolerância à cercosporiose.</td>
+                                <td>55 – 65</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Rubius F1 ⊕</strong></td>
+                                <td>Agristar</td>
+                                <td>Híbrido vigoroso; coloração intensa; ausência de anéis brancos; pele lisa.</td>
+                                <td>75 – 85</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Scarlet Super F1 ⊕</strong></td>
+                                <td>Agristar</td>
+                                <td>Raízes de coloração intensa e uniforme; ausência de anéis brancos.</td>
+                                <td>80 – 95</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Zeppo ⊕</strong></td>
+                                <td>Agrocinco</td>
+                                <td>Alta resistência à cercospora; ombro vermelho intenso; indicada para mercado fresco e processamento o ano todo.</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Boro F1 ⊕</strong></td>
+                                <td>Bejo</td>
+                                <td>Raízes muito lisas e uniformes; indicada para indústria de conservas; folhagem permite venda em maços.</td>
+                                <td>80 – 85</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Redondo F1 ⊕</strong></td>
+                                <td>Bejo</td>
+                                <td>Altamente produtivo e uniforme; raízes muito redondas; folhas muito vigorosas e de boa sanidade.</td>
+                                <td>90 – 95</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Rubra ⊕</strong></td>
+                                <td>Feltrin</td>
+                                <td>Elevado teor de sólidos solúveis (°Brix); tolerância a míldio, oídio, rizoctônia e cercospora.</td>
+                                <td>70 – 80</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Cabernet ⊕</strong></td>
+                                <td>Horticeres</td>
+                                <td>Tolerância à cercospora, míldio e oídio; inserção foliar pequena; cor vermelho intenso sem halos esbranquiçados.</td>
+                                <td>60 – 70</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Merlot ⊕</strong></td>
+                                <td>ISLA</td>
+                                <td>Resistência à cercospora e míldio; cor vermelho-escuro intenso; raízes uniformes.</td>
+                                <td>80</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Kestrel ⊕</strong></td>
+                                <td>Sakata</td>
+                                <td>Resistência moderada a Cercospora, míldio, oídio e rizoctônia; diâmetro 6–7 cm; indicada para semeadura direta e transplante.</td>
+                                <td>60 – 70 (verão) / 80 – 90 (inverno)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="mt-3 text-center">
+                    <p class="text-muted small">
+                        ⊕ Híbrido F1 &nbsp;|&nbsp;
+                        Fonte: Boletim Técnico IAC, n. 210, 2011 – Tivelli et al.
+                        <a href="https://ainfo.cnptia.embrapa.br/digital/bitstream/item/48016/1/Andre-May-Boletim-Tec-IAC.pdf" target="_blank" rel="noopener">cnptia.embrapa.br</a>
+                    </p>
+
+                    <div class="row g-3 justify-content-center">
+                        <div class="col-6 col-md-3">
+                            <figure class="figure">
+                                <img src="../../img/culturas-detalhe/beterraba-globular.webp" class="figure-img img-fluid rounded" alt="Beterraba globular em campo">
+                                <figcaption class="figure-caption text-center">Tipo globular (mais comum no Brasil)</figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <figure class="figure">
+                                <img src="../../img/culturas-detalhe/beterraba-plantio.webp" class="figure-img img-fluid rounded" alt="Beterraba em plantio">
+                                <figcaption class="figure-caption text-center">Plantio de beterraba</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Manejo e Plantio -->
+        <section class="card mb-4">
+            <div class="card-body">
+                <h3 class="h4">Manejo e Plantio</h3>
+                <div class="row mt-3">
+                    <div class="col-md-7">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><strong>Solo:</strong> Areno-argiloso ou argilo-arenoso, friável e bem drenado. pH em torno de 6,5 (80% de saturação por bases). Solos muito argilosos deformam as raízes.</li>
+                            <li class="list-group-item"><strong>Temperatura:</strong> Germinação ótima entre 10 °C e 15 °C; melhor desenvolvimento da parte aérea em torno de 20 °C. Evitar cultivos acima de 25 °C — causa anéis claros nas raízes e favorece doenças.</li>
+                            <li class="list-group-item"><strong>Época de semeadura:</strong> Altitude abaixo de 400 m → abril a junho; entre 400 e 800 m → fevereiro a junho; acima de 800 m → o ano todo.</li>
+                            <li class="list-group-item"><strong>Implantação:</strong> Por semeadura direta (até 12 kg/ha) ou transplante de mudas em bandejas de 288 células (~1–2 kg/ha). Profundidade ideal: 1–2 cm. O transplante eleva produtividade e qualidade.</li>
+                            <li class="list-group-item"><strong>Calagem:</strong> Aplicar corretivos com PRNT acima de 70%, com 60–90 dias de antecedência, incorporando até 20 cm de profundidade.</li>
+                            <li class="list-group-item"><strong>Adubação orgânica:</strong> 30–50 t/ha de esterco de curral curtido (dose maior em solos arenosos), ou ¼ da quantidade com esterco de galinha.</li>
+                            <li class="list-group-item"><strong>Adubação mineral de plantio:</strong> 20 kg/ha de N; P₂O₅ e K₂O conforme análise de solo; 2–4 kg/ha de boro.</li>
+                            <li class="list-group-item"><strong>Adubação de cobertura:</strong> 80–160 kg/ha de N e 40–80 kg/ha de K₂O, parcelados em 3 aplicações (15, 30 e 50 dias após germinação).</li>
+                            <li class="list-group-item"><strong>Irrigação:</strong> Período crítico nos primeiros 60 dias. Repor 40–50% da ETo até a 2ª semana pós-emergência; 75–85% durante o ciclo; e 105–120% nas 4 semanas antes da colheita.</li>
+                            <li class="list-group-item"><strong>Controle de plantas daninhas:</strong> Período crítico entre a 2ª e 6ª semanas após emergência (perdas de 79–96%). Usar capina manual, herbicida metamitrona (Goltix 700 WG, 4–6 kg/ha) ou lança-chamas (orgânicos).</li>
+                            <li class="list-group-item"><strong>Colheita:</strong> 70–110 dias após semeadura, quando as raízes atingem 6–8 cm de diâmetro. Produtividade: 500–1.800 caixas K (22 kg) por hectare.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mt-4 text-muted small">
+                    <p><strong>Fonte técnica:</strong> Beterraba: do Plantio à Comercialização.</p>
+                    <p><strong>Autores:</strong> Sebastião Wilson Tivelli, Thiago Leandro Factor, Juliana Rolim Salomé Teramoto, Eliane Gomes Fabri, Andrea Rocha Almeida de Moraes, Paulo Espíndola Trani, André May.</p>
+                    <p><strong>Instituição:</strong> Instituto Agronômico (IAC) – Campinas, novembro de 2011.</p>
+                    <p><strong>Documento completo:</strong> <a href="https://ainfo.cnptia.embrapa.br/digital/bitstream/item/48016/1/Andre-May-Boletim-Tec-IAC.pdf" target="_blank" rel="noopener">Boletim Técnico IAC, n. 210, 2011</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- MIP -->
+        <section class="card mb-4">
+            <div class="card-body">
+                <h3 class="h4 text-danger">Manejo Integrado de Pragas e Doenças (MIP)</h3>
+                <div class="table-responsive">
+                    <table class="table table-sm table-bordered mt-2">
+                        <thead class="table-dark text-center">
+                            <tr>
+                                <th>Problema</th>
+                                <th>Agente Causal</th>
+                                <th>Sintomas</th>
+                                <th>Manejo Recomendado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Tombamento (Damping-off)</strong></td>
+                                <td><em>Rhizoctonia solani, Pythium spp., Fusarium spp., Phytophthora spp.</em></td>
+                                <td>Tombamento de plântulas no coleto, em reboleiras; redução do estande; favorecido por alta umidade e temperaturas entre 15–25 °C.</td>
+                                <td>Rotação de cultura; matéria orgânica no plantio; sementes sadias; evitar solos compactados e encharcados; manejar adequadamente a irrigação inicial.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Cercosporiose (Mancha das Folhas)</strong></td>
+                                <td><em>Cercospora beticola</em> Sacc.</td>
+                                <td>Manchas arredondadas (4–5 mm), bordos púrpura e centro claro nas folhas velhas. Em alta intensidade, pode causar necrose total e morte de plantas.</td>
+                                <td>Rotação de cultura; cultivares tolerantes; adubação equilibrada; fungicidas registrados a cada 7–14 dias; Calda Viçosa.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Nematoides (Galhas Radiculares)</strong></td>
+                                <td><em>Meloidogyne arenaria, M. incognita, M. javanica</em></td>
+                                <td>Redução de crescimento, amarelecimento, murcha nos horários quentes; galhas ("pipoca") nas raízes tuberosas.</td>
+                                <td>Rotação com crotalária (adubação verde); evitar trânsito de máquinas em áreas infestadas; compostagem orgânica para aumentar microbiota do solo.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Podridão Branca</strong></td>
+                                <td><em>Sclerotium rolfsii</em> Sacc.</td>
+                                <td>Murcha nos horários quentes; podridão de raízes; micélio branco cotonoso e escleródios (~2 mm) no colo da planta.</td>
+                                <td>Medidas preventivas gerais; aração profunda; evitar solos compactados com baixo teor de matéria orgânica.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Mancha de Phoma</strong></td>
+                                <td><em>Phoma betae</em> Frank</td>
+                                <td>Lesões circulares pardo-escuras (1–2 cm) em folhas velhas; pontos pretos visíveis em condições de alta umidade.</td>
+                                <td>Apenas medidas preventivas: sementes sadias, rotação de cultura, manejo adequado da umidade.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Mancha Bacteriana da Folha</strong></td>
+                                <td><em>Xanthomonas campestris</em> pv. <em>betae</em></td>
+                                <td>Lesões com aspecto encharcado nos limbos foliares; tornam-se translúcidas e coalescentes; nervuras secundárias enegrecidas.</td>
+                                <td>Apenas medidas preventivas.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Murcha Bacteriana</strong></td>
+                                <td><em>Pseudomonas solanacearum</em></td>
+                                <td>Murcha acentuada dos folíolos mais velhos, amarelecimento, nanismo e produção de raízes adventícias.</td>
+                                <td>Apenas medidas preventivas; evitar ferimentos nas raízes causados por nematoides, insetos ou tratos culturais.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Lagarta Rosca</strong></td>
+                                <td><em>Agrotis ipsilon</em></td>
+                                <td>Seccionamento da haste de plântulas na fase inicial da cultura (hábito noturno).</td>
+                                <td>Monitoramento constante; risco maior em rotações com milho.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Vaquinha / Mosca Minadora</strong></td>
+                                <td><em>Diabrotica speciosa / Liriomyza</em> sp.</td>
+                                <td>Dano foliar; ocorrência restrita a alguns locais e anos de desequilíbrio populacional.</td>
+                                <td>Monitoramento; intervenção somente quando há dano econômico confirmado.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mt-3 text-muted small text-center">
+                    <p>Fonte: Boletim Técnico IAC 210, 2011 – Tivelli et al.</p>
+                    <p>🔗 Link: <a href="https://ainfo.cnptia.embrapa.br/digital/bitstream/item/48016/1/Andre-May-Boletim-Tec-IAC.pdf" target="_blank">www.iac.sp.gov.br</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Alerta -->
+        <div class="alert alert-warning d-flex align-items-center">
+            <i class="bi bi-thermometer-sun fs-3 me-3"></i>
+            <div>
+                <strong>Atenção ao Calor e Pluviosidade Elevados:</strong>
+                Temperaturas e chuvas excessivas causam má coloração interna nas raízes (anéis claros),
+                redução das betacianinas e favorecem a ocorrência da cercosporiose. Evite cultivos em
+                temperaturas acima de 25 °C. Em altitudes abaixo de 400 m, semeie apenas de abril a junho.
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="py-5 bg-light border-top">
+        <div class="container text-center">
+            <p class="text-muted fw-bold mb-1">Guia Verde – 2026</p>
+            <div class="small text-muted">
+                Fontes técnicas:
+                <a href="https://www.iac.sp.gov.br" target="_blank" rel="noopener" class="text-decoration-none text-secondary">Instituto Agronômico (IAC)</a> |
+                <a href="#" target="_blank" rel="noopener" class="text-decoration-none text-secondary">Boletim Técnico IAC 210</a>
+            </div>
+            <div class="small text-muted mt-2">
+                Conteúdo baseado em: TIVELLI, S.W. et al. <em>Beterraba: do plantio à comercialização.</em>
+                Série Tecnologia APTA. Boletim Técnico IAC, Campinas, n. 210, 2011.
+            </div>
+        </div>
+    </footer>
+
+    <button
+        type="button"
+        class="btn btn-success btn-floating btn-lg"
+        id="btn-back-to-top"
+        style="position: fixed; bottom: 20px; right: 20px; display: none;"
+        aria-label="Voltar ao topo"
+        title="Voltar ao topo">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <script src="../../js/ui-extras.js"></script>
+    <script src="../../../src/js/search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

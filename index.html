@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Verde</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"> 
+    <link rel="stylesheet" href="src/css/base.css">
+    <link rel="stylesheet" href="src/css/navbar.css">
+    <link rel="stylesheet" href="src/css/components.css">
+    <link rel="stylesheet" href="src/css/info-cards.css">
+    <link rel="stylesheet" href="src/css/responsive.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><i class="bi bi-leaf d-inline-block align-top"></i> Guia Verde</a>
+            <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Alternar navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./src/pages/catalogos/culturas.html">Principais Culturas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./src/pages/navbar/sobre.html">Sobre</a>
+                    </li>
+                </ul>
+                <form class="d-flex position-relative" role="search" id="searchForm">
+                    <label for="search" class="visually-hidden">Pesquisar</label>
+                    <input class="form-control me-2"
+                        id="search"
+                        type="search"
+                        placeholder="O que você procura?"
+                        aria-label="Pesquisar"
+                        autocomplete="off">
+                    <button class="btn btn-warning" type="submit">Pesquisar</button>
+                    <div id="suggestions" class="suggestions"></div>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section class="intro mt-4">
+            <div class="container text-center">
+                <h1>Guia Prático para Produtores Rurais</h1>
+                <p>
+                    Uma plataforma de consulta rápida para identificar sintomas,
+                    reconhecer agentes causadores e compreender práticas de manejo
+                    que ajudam a proteger a lavoura, preservar a produtividade
+                    e reduzir perdas no campo.
+                </p>
+                <h2 class="mt-4">Confira as culturas presentes no guia:</h2>
+                <a href="./src/pages/culturas/principal.html" class="btn btn-success ms-auto">Acessar Culturas</a>
+            </div>
+        </section>
+        <section class="carousel-section">
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                    <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                    <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                    <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                    <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="8" aria-label="Slide 9"></button>
+                    <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="9" aria-label="Slide 10"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./src/img/carousel/tomate.webp" class="d-block w-100" alt="Imagem de plantação de tomate">
+                        <div class="carousel-caption">
+                            <h5>Tomate</h5>
+                            <a href="./src/pages/culturas/tomate.html" class="btn btn-success">Saiba Mais</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./src/img/carousel/mandioca.webp" loading="lazy" class="d-block w-100" alt="Imagem de raízes de mandioca">
+                        <div class="carousel-caption">
+                            <h5>Mandioca</h5>
+                            <a href="./src/pages/culturas/mandioca.html" class="btn btn-success">Saiba Mais</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./src/img/carousel/alface.webp" loading="lazy" class="d-block w-100" alt="Imagem de folhas de alface">
+                        <div class="carousel-caption">
+                            <h5>Alface</h5>
+                            <a href="./src/pages/culturas/alface.html" class="btn btn-success">Saiba Mais</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./src/img/carousel/pimentao.webp" loading="lazy" class="d-block w-100" alt="Imagem de pimentão">
+                        <div class="carousel-caption">
+                            <h5>Pimentão</h5>
+                            <a href="./src/pages/culturas/pimentao.html" class="btn btn-success">Saiba Mais</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./src/img/carousel/cenoura.webp" loading="lazy" class="d-block w-100" alt="Imagem de cenoura">
+                        <div class="carousel-caption">
+                            <h5>Cenoura</h5>
+                            <a href="./src/pages/culturas/cenoura.html" class="btn btn-success">Saiba Mais</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./src/img/carousel/couve.webp" loading="lazy" class="d-block w-100" alt="Imagem de couve">
+                        <div class="carousel-caption">
+                            <h5>Couve</h5>
+                            <a href="./src/pages/culturas/couve.html" class="btn btn-success">Saiba Mais</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./src/img/carousel/pepino.webp" loading="lazy" class="d-block w-100" alt="Imagem de pepino">
+                        <div class="carousel-caption">
+                            <h5>Pepino</h5>
+                            <a href="./src/pages/culturas/pepino.html" class="btn btn-success">Saiba Mais</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./src/img/carousel/repolho.webp" loading="lazy" class="d-block w-100" alt="Imagem de repolho">
+                        <div class="carousel-caption">
+                            <h5>Repolho</h5>
+                            <a href="./src/pages/culturas/repolho.html" class="btn btn-success">Saiba Mais</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./src/img/carousel/cebolinha.webp" loading="lazy" class="d-block w-100" alt="Imagem de cebolinha">
+                        <div class="carousel-caption">
+                            <h5>Cebolinha</h5>
+                            <a href="./src/pages/culturas/cebolinha.html" class="btn btn-success">Saiba Mais</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./src/img/carousel/beterraba.webp" loading="lazy" class="d-block w-100" alt="Imagem de beterraba">
+                        <div class="carousel-caption">
+                            <h5>Beterraba</h5>
+                            <a href="./src/pages/culturas/beterraba.html" class="btn btn-success">Saiba Mais</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Próximo</span>
+                </button>
+            </div>
+        </section>
+        <section>
+            <div class="text-center">
+                <h2 class="bg-success p-2 text-white rounded shadow-sm w-50 mx-auto">Veja Também</h2>
+            </div>
+        </section>
+        <section class="info-section py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <article class="info-card mb-5">
+                            <div class="row align-items-center g-4">
+                                <div class="col-lg-6">
+                                    <div class="info-content">
+                                        <span class="badge bg-success mb-3">Boas Práticas Agrícolas</span>
+                                        <h2 class="fw-semibold">Produzir bem começa com manejo correto.</h2>
+                                        <p class="lead text-muted">
+                                            Uma lavoura saudável depende de observação, planejamento e prevenção.
+                                            O manejo adequado ajuda a reduzir o aparecimento de pragas e doenças,
+                                            melhora o aproveitamento dos recursos naturais e fortalece o desenvolvimento
+                                            das plantas ao longo de todo o ciclo produtivo.
+                                        </p>
+                                        <ul class="list-unstyled mb-4">
+                                            <li class="mb-2">
+                                                <i class="bi bi-check-circle-fill text-success"></i>
+                                                Rotação de culturas para preservar a qualidade e o equilíbrio do solo.
+                                            </li>
+                                            <li class="mb-2">
+                                                <i class="bi bi-check-circle-fill text-success"></i>
+                                                Uso consciente de métodos preventivos e estratégias de controle integrado.
+                                            </li>
+                                            <li class="mb-2">
+                                                <i class="bi bi-check-circle-fill text-success"></i>
+                                                Planejamento do plantio conforme clima, época e exigências da cultura.
+                                            </li>
+                                        </ul>
+                                        <a href="./src/pages/guias/guia-manejo.html" class="btn btn-success btn-lg shadow-sm">
+                                            <i class="bi bi-arrow-right"></i> Ver Dicas de Manejo
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="info-image-wrapper position-relative">
+                                        <img src="./src/img/cards/manejo.webp"
+                                            loading="lazy"
+                                            class="img-fluid rounded-4 shadow info-image"
+                                            alt="Imagem de mão plantando uma muda no campo">
+                                        <div class="info-highlight info-highlight-warning position-absolute bottom-0 start-0 m-3 d-none d-md-block">
+                                            <p class="mb-0 fw-bold text-dark">Dica Técnica:</p>
+                                            <small class="text-muted">
+                                                O monitoramento frequente ajuda a identificar problemas antes que eles avancem.
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="info-card mb-5">
+                            <div class="row align-items-center g-4">
+                                <div class="col-lg-6 order-lg-2">
+                                    <div class="info-content">
+                                        <span class="badge bg-success mb-3">Controle de Pragas</span>
+                                        <h2 class="fw-semibold">Monitore, identifique e aja com precisão.</h2>
+                                        <p class="lead text-muted">
+                                            Insetos, ácaros e outros agentes podem comprometer rapidamente
+                                            a sanidade da plantação. Reconhecer sinais de ataque, padrões
+                                            de dano e pontos críticos da cultura permite tomar decisões
+                                            mais eficazes e evitar prejuízos maiores.
+                                        </p>
+                                        <ul class="list-unstyled mb-4">
+                                            <li class="mb-2">
+                                                <i class="bi bi-bug-fill text-success"></i>
+                                                Inspeção detalhada da face inferior das folhas e brotações novas.
+                                            </li>
+                                            <li class="mb-2">
+                                                <i class="bi bi-bug-fill text-success"></i>
+                                                Identificação de manchas, furos, raspagens e deformações nas plantas.
+                                            </li>
+                                            <li class="mb-2">
+                                                <i class="bi bi-bug-fill text-success"></i>
+                                                Instalação de armadilhas e acompanhamento da população de pragas.
+                                            </li>
+                                        </ul>
+                                        <a href="./src/pages/guias/guia-pragas.html" class="btn btn-success border-0 btn-lg shadow-sm">
+                                            <i class="bi bi-arrow-right"></i> Ver Catálogo de Pragas
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 order-lg-1">
+                                    <div class="info-image-wrapper position-relative">
+                                        <img src="./src/img/cards/pragas.webp"
+                                            loading="lazy"
+                                            class="img-fluid rounded-4 shadow info-image"
+                                            alt="Imagem de folha com sinais de ataque de pragas">
+                                        <div class="info-highlight info-highlight-warning position-absolute bottom-0 start-0 m-3 d-none d-md-block">
+                                            <p class="mb-0 fw-bold text-dark small">Alerta Técnico:</p>
+                                            <small class="text-dark">
+                                                A detecção precoce reduz a disseminação e facilita o controle na área cultivada.
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="info-card mb-5">
+                            <div class="row align-items-center g-4">
+                                <div class="col-lg-6 order-lg-2">
+                                    <div class="info-content">
+                                        <span class="badge bg-success mb-3">Nutrição e Deficiências</span>
+                                        <h2 class="fw-semibold">Identifique carências nutricionais e garanta o vigor das plantas.</h2>
+                                        <p class="lead text-muted">
+                                            Nem todo sinal de amarelamento ou deformação é causado por pragas.
+                                            Muitas vezes, a lavoura apresenta carência de nutrientes essenciais.
+                                            Reconhecer esses sinais visualmente permite uma adubação corretiva
+                                            precisa, evitando a perda de produtividade e o desperdício de insumos.
+                                        </p>
+                                        <ul class="list-unstyled mb-4">
+                                            <li class="mb-2">
+                                                <i class="bi bi-droplet-half text-success"></i>
+                                                Diagnóstico visual de cloroses, necroses e tons arroxeados nas folhas.
+                                            </li>
+                                            <li class="mb-2">
+                                                <i class="bi bi-droplet-half text-success"></i>
+                                                Diferenciação entre deficiências em folhas jovens e folhas adultas.
+                                            </li>
+                                            <li class="mb-2">
+                                                <i class="bi bi-droplet-half text-success"></i>
+                                                Orientações sobre o equilíbrio de NPK e micronutrientes no solo.
+                                            </li>
+                                        </ul>
+                                        <a href="./src/pages/guias/guia-nutricao.html" class="btn btn-success btn-lg shadow-sm">
+                                            <i class="bi bi-arrow-right"></i> Ver Guia de Nutrição
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 order-lg-1">
+                                    <div class="info-image-wrapper position-relative">
+                                        <img src="./src/img/cards/nutricao.webp"
+                                            loading="lazy"
+                                            class="img-fluid rounded-4 shadow info-image"
+                                            alt="Imagem de agricultor adubando a muda no campo">
+                                        <div class="info-highlight info-highlight-warning position-absolute bottom-0 start-0 m-3 d-none d-md-block">
+                                            <p class="mb-0 fw-bold text-dark small">Dica Nutricional:</p>
+                                            <small class="text-muted">
+                                                Folhas velhas amareladas costumam indicar falta de nitrogênio.
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="info-card mb-5">
+                            <div class="row align-items-center g-4">
+                                <div class="col-lg-6">
+                                    <div class="info-content">
+                                        <span class="badge bg-success mb-3">Plantas Daninhas</span>
+                                        <h2 class="fw-semibold">Controle a competição e proteja seu potencial produtivo.</h2>
+                                        <p class="lead text-muted">
+                                            Espécies invasoras competem diretamente com sua cultura por luz, água e nutrientes.
+                                            A identificação correta dessas plantas e a escolha do momento ideal para o manejo
+                                            são fundamentais para evitar a mato-competição e garantir que a lavoura se desenvolva
+                                            sem obstáculos.
+                                        </p>
+                                        <ul class="list-unstyled mb-4">
+                                            <li class="mb-2">
+                                                <i class="bi bi-scissors text-success"></i>
+                                                Identificação de espécies de folha larga e folha estreita.
+                                            </li>
+                                            <li class="mb-2">
+                                                <i class="bi bi-scissors text-success"></i>
+                                                Métodos de controle: mecânico, cultural e químico.
+                                            </li>
+                                            <li class="mb-2">
+                                                <i class="bi bi-scissors text-success"></i>
+                                                Estratégias para prevenir a resistência de plantas invasoras.
+                                            </li>
+                                        </ul>
+                                        <a href="./src/pages/guias/guia-daninhas.html" class="btn btn-success btn-lg shadow-sm">
+                                            <i class="bi bi-arrow-right"></i> Ver Guia de Invasoras
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="info-image-wrapper position-relative">
+                                        <img src="./src/img/cards/daninhas.webp"
+                                            loading="lazy"
+                                            class="img-fluid rounded-4 shadow info-image"
+                                            alt="Imagem de plantio tomado por plantas invasoras">
+                                        <div class="info-highlight info-highlight-warning position-absolute bottom-0 start-0 m-3 d-none d-md-block">
+                                            <p class="mb-0 fw-bold text-dark small">Dica de Manejo:</p>
+                                            <small class="text-muted">
+                                                O controle antes da floração das daninhas evita que elas espalhem sementes no solo.
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="info-card">
+                            <div class="row align-items-center g-4">
+                                <div class="col-lg-6 order-lg-2">
+                                    <div class="info-content">
+                                        <span class="badge bg-success text-white mb-3">Monitoramento Climático</span>
+                                        <h2 class="fw-semibold">O clima dita o ritmo e o sucesso da sua lavoura.</h2>
+                                        <p class="lead text-muted">
+                                            Entender as variações de temperatura, umidade e o regime de chuvas é crucial
+                                            para planejar o plantio e a colheita. O acompanhamento climático permite
+                                            antecipar riscos e escolher os melhores momentos para o manejo preventivo.
+                                        </p>
+                                        <ul class="list-unstyled mb-4">
+                                            <li class="mb-2">
+                                                <i class="bi bi-thermometer-sun text-success"></i>
+                                                Monitoramento de temperatura e umidade relativa do ar.
+                                            </li>
+                                            <li class="mb-2">
+                                                <i class="bi bi-cloud-rain text-success"></i>
+                                                Previsão de janelas hídricas ideais para semeadura e colheita.
+                                            </li>
+                                            <li class="mb-2">
+                                                <i class="bi bi-wind text-success"></i>
+                                                Análise de ventos para segurança na aplicação de insumos.
+                                            </li>
+                                        </ul>
+                                        <a href="./src/pages/guias/guia-clima.html" class="btn btn-success btn-lg shadow-sm">
+                                            <i class="bi bi-arrow-right"></i> Ver Guia Climático
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 order-lg-1">
+                                    <div class="info-image-wrapper position-relative">
+                                        <img src="./src/img/cards/clima.webp"
+                                            loading="lazy"
+                                            class="img-fluid rounded-4 shadow info-image"
+                                            alt="Imagem de agricultor observando a chuva chegando na plantação">
+                                        <div class="info-highlight info-highlight-warning position-absolute bottom-0 start-0 m-3 d-none d-md-block">
+                                            <p class="mb-0 fw-bold text-dark small">Dica Técnica:</p>
+                                            <small class="text-muted">
+                                                Evite aplicações de defensivos com ventos acima de 10 km/h para prevenir a deriva.
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="py-4 text-center bg-body-secondary">
+        <div class="container">
+            <p class="mb-0">
+                © 2026 Guia Verde — Plataforma de apoio ao diagnóstico agrícola.
+            </p>
+        </div>
+    </footer>
+    <button 
+        type="button"
+        class="btn btn-success btn-floating btn-lg"
+        id="btn-back-to-top"
+        style="position: fixed; bottom: 20px; right: 20px; display: none;"
+        aria-label="Voltar ao topo"
+        title="Voltar ao topo">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous">
+    </script>
+    <script src="./src/js/ui-extras.js"></script>
+    <script src="./src/js/search.js"></script>
+</body>
+</html>

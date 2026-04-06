@@ -1,0 +1,120 @@
+.navbar {
+    background: linear-gradient(90deg, #0a3d0a, #0f5f0f);
+    padding: 0.8rem 1rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+    border-bottom: 4px solid green;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #9cff57 !important;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #c7ff8c !important;
+    transform: scale(1.05);
+}
+
+.navbar-nav .nav-link {
+    color: #e9ffe2 !important;
+    font-weight: 500;
+    margin-right: 10px;
+    transition: 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #9cff57 !important;
+    transform: translateY(-1px);
+}
+
+.navbar-toggler {
+    border: 2px solid #9cff57;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: 0.3s ease;
+}
+
+.navbar-toggler:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-color: #2b4617;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* Componentes de Formulário dentro da Nav/Geral */
+.form-control {
+    background-color: #e9ffd3;
+    border: 2px solid #7ed957;
+    border-radius: 20px;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 10px rgba(126, 217, 87, 0.7);
+    border-color: #7ed957;
+    background-color: #f4ffe9;
+}
+
+.btn-warning {
+    border-radius: 20px;
+    font-weight: 600;
+    padding: 6px 16px;
+    transition: 0.3s ease;
+}
+
+.btn-warning:hover {
+    transform: scale(1.05);
+}
+
+.dropdown-menu {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-item {
+    padding: 8px 15px;
+    transition: 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #e7ffd5;
+    color: #0a3d0a;
+}
+
+/* Sugestões */
+
+#suggestions {
+    padding: 10px;
+    margin-top: 15px;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 60px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    z-index: 9999;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    max-height: 260px;
+    overflow-y: auto;
+} 
+
+#suggestions div {
+    padding: 10px 14px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #000000;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background 0.15s;
+}
+.suggestions div:last-child {
+    border-bottom: none;
+}
+.suggestions div:hover {
+    background-color: #e8f5e9;
+}

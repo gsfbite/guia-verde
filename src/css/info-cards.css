@@ -1,0 +1,31 @@
+.info-section {
+    background-color: transparent !important;
+}
+
+.info-card {
+    background: rgb(250, 255, 231);
+    border: 2px rgb(109, 109, 109) solid;
+    border-radius: 1rem;
+    border-top-right-radius: 5rem;
+    padding: 1.5rem;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.16);
+}
+
+.info-content h2 { color: #103b10; margin-bottom: 1rem; }
+.info-content .lead { font-size: 1.08rem; line-height: 1.6; }
+.info-content ul li { font-size: 1rem; color: #173d17; }
+
+.info-image-wrapper { overflow: hidden; border-radius: 1.5rem; }
+.info-image { width: 100%; height: 100%; min-height: 320px; object-fit: cover; }
+
+.info-highlight {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 0.9rem 1rem;
+    border-radius: 1rem;
+    max-width: 260px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.info-highlight-warning {
+    background-color: rgba(255, 217, 61, 0.92);
+}

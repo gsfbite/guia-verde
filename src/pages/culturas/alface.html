@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Verde | Alface</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/navbar.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-leaf"></i>
+                Guia Verde
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link active" href="../../../index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../pages/navbar/sobre.html">Sobre</a></li>
+                </ul>
+                <form class="d-flex" role="search" onsubmit="buscar(event)">
+                    <input id="campoBusca" class="form-control me-2" type="search" 
+                          placeholder="O que procura?" aria-label="Pesquisar">
+                    <button class="btn btn-warning" type="submit">Pesquisar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-4">
+    <div class="d-flex mb-3">
+        <button type="button" onclick="history.back()" class="btn btn-secondary">
+            <i class="bi bi-arrow-left"></i> Voltar
+        </button>
+
+        <a href="../../../index.html" class="btn btn-success ms-auto">
+            Página Inicial
+        </a>
+    </div>
+    <div class="card mb-4 border-0 shadow-sm">
+    
+        <div class="row g-0 align-items-center">
+            
+            <!-- Texto -->
+            <div class="col-12 col-md-8">
+                <div class="card-body">
+                    <h2 class="card-title">Alface (<em>Lactuca sativa</em>)</h2>
+                    <p class="card-text">
+                        A alface, cujo nome científico é Lactuca sativa, é uma hortaliça herbácea muito cultivada e consumida no mundo todo, especialmente crua em saladas. Ela pertence à família Asteraceae, tem caule curto, folhas que podem ser lisas ou crespas, verdes, arroxeadas ou amareladas, e seu ciclo costuma ser anual, com flores amarelas na fase reprodutiva.
+                    </p>
+                    <h2>Descrição</h2>
+                    <p>
+                        A alface é uma planta de porte baixo, geralmente entre 15 e 30 centímetros, com folhas dispostas em roseta ao redor de um caule curto. Conforme a variedade, pode formar uma “cabeça” mais compacta ou crescer com folhas soltas, e isso explica a grande diversidade de tipos encontrados no cultivo.
+                    </p>
+                    <h2>Principais Características:</h2>
+                    <ul>
+                        <li><strong>Nome científico:</strong> Lactuca sativa.</li>
+                        <li><strong>Família botânica:</strong> Asteraceae.</li>
+                        <li><strong>Hábito de crescimento:</strong> herbácea anual.</li>
+                        <li><strong>Folhas:</strong> lisas, crespas ou frisadas, em tons de verde, roxo ou arroxeado.</li>
+                        <li><strong>Flor:</strong> pequena, amarela, reunida em inflorescências.</li>
+                        <li><strong>Fruto:</strong> seco, do tipo aquênio.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Imagem -->
+            <div class="col-12 col-md-4">
+                <img src="../../img/culturas-intro/cultivo-alface.webp"
+                    class="img-fluid h-100 w-100 object-fit-cover"
+                    alt="Cultivo de Alface">
+            </div>
+
+        </div>
+
+    </div>
+
+        <section class="card mb-4">
+            <div class="card-body">
+                <h3 class="h4 mb-3">Variedades Recomendadas (Embrapa)</h3>
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle border">
+                        <thead class="table-success">
+                            <tr>
+                                <th>Cultivar</th>
+                                <th>Tipo de Folha</th>
+                                <th>Destaque Técnico</th>
+                                <th>Ciclo (dias)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>BRS Leila</strong></td>
+                                <td>Crespa (Verde-oliva)</td>
+                                <td>Tolerante ao pendoamento; adaptada a campo, cultivo protegido e hidroponia; resistência a nematoides-das-galhas e ao vírus do mosaico da alface.</td>
+                                <td>35 - 45</td>
+                            </tr>
+                            <tr>
+                                <td><strong>BRS Mediterrânea</strong></td>
+                                <td>Crespa (Verde-escuro)</td>
+                                <td>Tolerante ao calor e ao pendoamento; resistência ao Fusarium e nematoides-das-galhas; adaptada a campo, cultivo protegido e hidroponia.</td>
+                                <td>35 - 45</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mt-3 text-center">
+                    <p class="text-muted small">
+                        Fonte: Dados técnicos adaptados de publicações da Embrapa.
+                        Para mais informações acesse:
+                        <a href="https://www.embrapa.br/cultivar/alface" target="_blank" rel="noopener">
+                            Cultivares de alface da Embrapa
+                        </a>
+                    </p>
+
+                    <div class="row g-3 justify-content-center">
+
+                        <div class="col-6 col-md-3">
+                            <figure class="figure">
+                                <img src="../../img/culturas-detalhe/alfa-crespa.webp" class="figure-img img-fluid rounded" alt="Alface Crespa">
+                                <figcaption class="figure-caption text-center">Alface Crespa</figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="col-6 col-md-3">
+                            <figure class="figure">
+                                <img src="../../img/culturas-detalhe/alface-lisa.webp" class="figure-img img-fluid rounded" alt="Alface Lisa">
+                                <figcaption class="figure-caption text-center">Alface Lisa</figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="col-6 col-md-3">
+                            <figure class="figure">
+                                <img src="../../img/culturas-detalhe/alface-romana.webp" class="figure-img img-fluid rounded" alt="Alface Romana">
+                                <figcaption class="figure-caption text-center">Alface Romana</figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="col-6 col-md-3">
+                            <figure class="figure">
+                                <img src="../../img/culturas-detalhe/alface-americana.webp" class="figure-img img-fluid rounded" alt="Alface Americana">
+                                <figcaption class="figure-caption text-center">Alface Americana</figcaption>
+                            </figure>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card mb-4">
+            <div class="card-body">
+                <h3 class="h4">Manejo e Plantio</h3>
+
+                <div class="row mt-3">
+                    <div class="col-md-7">
+
+                        <ul class="list-group list-group-flush">
+
+                            <li class="list-group-item">
+                                <strong>Produção de mudas:</strong> Recomenda-se o uso de sementeiras ou bandejas para melhor controle sanitário e seleção das mudas mais vigorosas.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Transplante:</strong> Deve ser realizado quando as mudas apresentarem entre 4 e 6 folhas definitivas, geralmente entre 15 e 20 dias após a semeadura.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Horário de plantio:</strong> O transplante deve ser feito nas horas mais frescas do dia, preferencialmente no início da manhã ou final da tarde.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Irrigação:</strong> Após o transplante, realizar irrigações diárias nas primeiras semanas. Posteriormente, irrigar a cada 2 a 3 dias, mantendo a umidade do solo constante.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Solo:</strong> Deve ser livre de contaminação química e biológica, com análise prévia para correção de pH e adequação nutricional antes do plantio.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Adubação:</strong> Preferencialmente utilizar adubos orgânicos compostados. A incorporação deve ser realizada antes do plantio para reduzir riscos de contaminação microbiológica.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Manejo fitossanitário:</strong> Recomenda-se o monitoramento constante da lavoura e adoção do manejo integrado de pragas e doenças para reduzir o uso de defensivos agrícolas.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Rotação de culturas:</strong> Prática recomendada para melhorar a fertilidade do solo e reduzir incidência de pragas, doenças e plantas daninhas.
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+
+                <!-- Créditos e fonte técnica -->
+                <div class="mt-4 text-muted small">
+
+                    <p>
+                        <strong>Fonte técnica:</strong> Manual de Boas Práticas Agrícolas na Produção de Alface.
+                    </p>
+
+                    <p>
+                        <strong>Autores:</strong> Iriani Rodrigues Maldonade, Leonora Mansur Mattos, Celso Luís Moretti.
+                    </p>
+
+                    <p>
+                        <strong>Instituição:</strong> Embrapa Hortaliças.
+                    </p>
+
+                    <p>
+                        <strong>Documento completo:</strong> 
+                        <a href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1009227" target="_blank" rel="noopener">
+                            Manual de boas práticas agrícolas na produção de alface.
+                        </a>
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="card mb-4">
+            <div class="card-body">
+
+                <h3 class="h4 text-danger">Manejo Integrado de Pragas e Doenças (MIP)</h3>
+
+                <div class="table-responsive">
+                    <table class="table table-sm table-bordered mt-2">
+                        <thead class="table-dark text-center">
+                            <tr>
+                                <th>Problema</th>
+                                <th>Sintomas</th>
+                                <th>Manejo Recomendado</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td><strong>Mosaico da Alface (LMV)</strong></td>
+                                <td>Mosaico foliar, manchas cloróticas, deformação das folhas e redução do crescimento.</td>
+                                <td>Uso de sementes certificadas, mudas sadias e controle de insetos vetores (principalmente pulgões).</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Míldio (<em>Bremia lactucae</em>)</strong></td>
+                                <td>Manchas amarelo-pálidas nas folhas que evoluem para necrose, com massa branca na face inferior.</td>
+                                <td>Evitar alta umidade, melhorar ventilação da lavoura, utilizar cultivares resistentes e manejo adequado da irrigação.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Podridões radiculares (ex.: <em>Pythium</em>)</strong></td>
+                                <td>Murcha, escurecimento das raízes e desenvolvimento reduzido das plantas.</td>
+                                <td>Plantio em solos bem drenados, controle da irrigação e uso de mudas sadias.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Tripes (vetores de viroses)</strong></td>
+                                <td>Prateamento das folhas, manchas e transmissão de vírus como Tospovirus.</td>
+                                <td>Monitoramento da lavoura, controle de plantas hospedeiras, uso de armadilhas e manejo do vetor.</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="mt-3 text-muted small text-center">
+
+                    <p>
+                        Informações adaptadas de publicações técnicas sobre fitopatologia da cultura da alface.
+                    </p>
+
+                    <p>
+                        <strong>Autores:</strong> Diene Elen Miranda da Silva; Francisco de Assis Câmara Rabelo Filho;
+                        Christiana de Fátima Bruce da Silva; Cristiano Souza Lima.
+                    </p>
+
+                    <p>
+                        Obra organizada por Marcelo de Almeida Guimarães e Hozano de Souza Lemos Neto.
+                    </p>
+
+                    <p>
+                        Documento complementar: Manual de Boas Práticas Agrícolas na Produção de Alface –
+                        Iriani Rodrigues Maldonade; Leonora Mansur Mattos; Celso Luís Moretti.
+                    </p>
+
+                    <p>
+                        🔗 Link do documento: 
+                        <a href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1162770" target="_blank">Principais doenças e suas formas de controle.</a>
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+
+        <div class="alert alert-warning d-flex align-items-center">
+            <i class="bi bi-sun fs-3 me-3"></i>
+            <div class="alert alert-warning mt-3">
+                <strong>Alerta de Temperatura:</strong>
+                A alface é uma cultura de clima ameno, com melhor desenvolvimento entre 15 °C e 22 °C.
+                Temperaturas elevadas (acima de aproximadamente 26–28 °C) podem induzir o 
+                <strong>pendoamento precoce</strong>, reduzir a qualidade comercial e aumentar o amargor das folhas.
+                Em regiões quentes recomenda-se o uso de sombreamento e manejo adequado da irrigação
+                para reduzir o estresse térmico da cultura.
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-5 bg-light border-top">
+        <div class="container text-center">
+            <p class="text-muted fw-bold mb-1">Guia Verde – 2026</p>
+
+            <div class="small text-muted">
+                Fontes técnicas:
+                <a href="https://www.embrapa.br/hortalicas"
+                target="_blank"
+                rel="noopener"
+                class="text-decoration-none text-secondary">
+                Embrapa Hortaliças
+                </a> |
+                
+                <a href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1162770"
+                target="_blank"
+                rel="noopener"
+                class="text-decoration-none text-secondary">
+                Livro "Alface de A a Z"
+                </a> |
+
+            </div>
+
+            <div class="small text-muted mt-2">
+                Conteúdo técnico adaptado de materiais de extensão rural da
+                Embrapa e literatura agronômica sobre o cultivo de alface.
+            </div>
+        </div>
+    </footer>
+    <button 
+        type="button"
+        class="btn btn-success btn-floating btn-lg"
+        id="btn-back-to-top"
+        style="position: fixed; bottom: 20px; right: 20px; display: none;"
+        aria-label="Voltar ao topo"
+        title="Voltar ao topo">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+    <script src="../../js/ui-extras.js"></script>
+    <script src="../../../src/js/search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Verde | Sobre o Projeto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/navbar.css">
+</head>
+
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><i class="bi bi-leaf d-inline-block align-top" style="font-size: 1.5rem; color: #a7ffab;"></i> Guia Verde</a>
+
+            <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Alternar navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <!-- Menu -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../../../index.html">Início</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../pages/catalogos/culturas.html">Principais Culturas</a>
+                    </li>
+                </ul>
+
+                <!-- Busca -->
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2"
+                        type="search"
+                        placeholder="O que procura?"
+                        aria-label="Pesquisar">
+                    <button class="btn btn-warning" type="submit">Pesquisar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+        <div class="d-flex mb-3">
+            <button type="button" onclick="history.back()" class="btn btn-secondary">
+                <i class="bi bi-arrow-left"></i> Voltar
+            </button>
+
+            <a href="../../../index.html" class="btn btn-success ms-auto">
+                Página Inicial
+            </a>
+        </div>
+        <section class="row align-items-stretch g-4 mb-5">
+            
+            <div class="col-lg-7">
+                <div class="h-100 p-4 bg-info-subtle p-md-5 rounded-4 shadow-sm border-start border-success border-5">
+                    <h1 class="display-5 fw-bold text-success mb-4">O Propósito</h1>
+                    <p class="lead text-dark">
+                        O Distrito Federal possui uma diversidade agrícola imensa, mas este guia concentra seus esforços onde o impacto é imediato. 
+                    </p>
+                    <p class="text-secondary">
+                        Selecionamos as <strong>10 principais hortaliças</strong> produzidas na região — como o tomate, a alface, o pimentão e a mandioca — que representam a maior parte da renda e do trabalho dos nossos pequenos produtores.
+                    </p>
+                    <p class="text-secondary">
+                        Focar nessas culturas nos permite entregar um conteúdo profundo e útil, baseado em dados da <strong>EMATER-DF</strong> e tendências para 2025–2026.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="h-100 position-relative">
+                    <img src="../../img/navbar/plantio.webp" alt="Plantação de Hortaliças" class="w-100 h-100 object-fit-cover rounded-4 shadow">
+                </div>
+            </div>
+        </section>
+
+        <div class="row g-4 mb-5">
+            <div class="col-md-6">
+                <div class="card h-100 border-0 shadow-sm rounded-4 custom-border-top hover-shadow">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-exclamation-triangle-fill text-danger fs-3 me-3"></i>
+                            <h3 class="h4 fw-bold m-0">O Abismo de Informação</h3>
+                        </div>
+                        <p class="text-secondary">
+                            Muitas vezes, o conhecimento técnico está confinado em artigos complexos ou consultorias caras. Essa barreira gera dependência de soluções paliativas e uso inadequado de insumos no campo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card h-100 border-0 shadow-sm rounded-4 custom-border-top hover-shadow">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-lightning-charge-fill text-success fs-3 me-3"></i>
+                            <h3 class="h4 fw-bold m-0">Simplicidade Estrutural</h3>
+                        </div>
+                        <p class="text-secondary mb-3">Optamos por um <strong>Microsite Estático</strong> focado na realidade rural:</p>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill p-2 px-3">
+                                <i class="bi bi-eye me-1"></i> Navegação Visual
+                            </span>
+                            <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill p-2 px-3">
+                                <i class="bi bi-reception-2 me-1"></i> Baixo Consumo (2G/3G)
+                            </span>
+                            <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill p-2 px-3">
+                                <i class="bi bi-check2-square me-1"></i> Diagnóstico Prático
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="p-5 bg-dark text-white rounded-5 shadow-lg text-center overflow-hidden position-relative">
+            <div class="position-absolute top-0 start-0 w-100 h-100 bbg-black bg-gradient"></div>
+            <div class="position-relative z-1">
+                <h2 class="fw-bold mb-3">Extensão Universitária e Impacto Social</h2>
+                <p class="lead mb-4 mx-auto" style="max-width: 800px;">
+                    Desenvolvido no curso de <strong>Análise e Desenvolvimento de Sistemas (ADS)</strong>. Transformamos código em produtividade, garantindo suporte direto ao pequeno agricultor do DF.
+                </p>
+                <div class="d-flex justify-content-center gap-3">
+                    <a href="https://github.com/gsf-permutado/catalogo-hortalicas" target="_blank" class="btn btn-warning btn-lg px-4 fw-bold">
+                        <i class="bi bi-github me-2"></i>Ver Código no GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="py-5 bg-white border-top">
+        <div class="container text-center text-muted">
+            <p class="mb-1 fw-bold">Guia Verde - 2026</p>
+            <small>Projeto de Extensão em Análise e Desenvolvimento de Sistemas</small>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

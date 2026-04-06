@@ -1,0 +1,42 @@
+body {
+    background-image: url("../img/bg/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+    pointer-events: none;
+}
+
+/* Overlay suave para melhorar leitura */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 20, 0, 0.18);
+    z-index: -1;
+}
+
+/* Utilitários e Badges gerais */
+.badge {
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+    border-radius: 999px;
+}
+
+.custom-border-top { 
+    border-top: 5px solid #198754 !important; 
+}
+
+.hover-shadow:hover { 
+    transform: translateY(-5px); 
+    transition: 0.3s; 
+}
+
+.bg-gradient-success { 
+    background: linear-gradient(45deg, #198754, #28a745); 
+}
