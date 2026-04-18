@@ -8,6 +8,8 @@ Diferente de sistemas complexos, este projeto utiliza a arquitetura de **Microsi
 * **Página Principal:** Painel intuitivo com cards de acesso rápido por cultura.
 * **Páginas de Detalhes:** Guias específicos para cada praga ou doença, com fotos e recomendações técnicas.
 
+![Página Inicial do Projeto](src/img/intro-docs/initial-page.png)
+
 ## 📂 Documentação e Planejamento
 Para entender a base científica e técnica deste desenvolvimento, acesse os documentos abaixo:
 
