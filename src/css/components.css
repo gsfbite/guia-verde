@@ -11,7 +11,9 @@
 }
 
 .intro h2 {
-    color: rgb(255, 252, 58);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+    color: rgb(255, 253, 117);
     margin-top: 1rem;
 }
 
