@@ -9,13 +9,16 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../../css/base.css">
     <link rel="stylesheet" href="../../css/navbar.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/info-cards.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
 </head>
-
+<script src="../../js/search.js"></script>
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="../../../index.html">
                 <i class="bi bi-leaf"></i>
                 Guia Verde
             </a>
@@ -28,10 +31,16 @@
                     <li class="nav-item"><a class="nav-link active" href="../../../index.html">Início</a></li>
                     <li class="nav-item"><a class="nav-link" href="../../pages/navbar/sobre.html">Sobre</a></li>
                 </ul>
-                <form class="d-flex" role="search" onsubmit="buscar(event)">
-                    <input id="campoBusca" class="form-control me-2" type="search"
-                          placeholder="O que procura?" aria-label="Pesquisar">
+                <form class="d-flex position-relative" role="search" id="searchForm">
+                    <label for="search" class="visually-hidden">Pesquisar</label>
+                    <input class="form-control me-2"
+                        id="search"
+                        type="search"
+                        placeholder="O que você procura?"
+                        aria-label="Pesquisar"
+                        autocomplete="off">
                     <button class="btn btn-warning" type="submit">Pesquisar</button>
+                    <div id="suggestions" class="suggestions"></div>
                 </form>
             </div>
         </div>
@@ -380,7 +389,6 @@
         <i class="bi bi-arrow-up"></i>
     </button>
     <script src="../../js/ui-extras.js"></script>
-    <script src="../../../src/js/search.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
