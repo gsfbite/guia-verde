@@ -65,6 +65,32 @@ Essa estrutura funciona como um **índice de busca local**, permitindo consultas
 
 ---
 
+##  Tratamento de Imagens
+
+As imagens utilizadas no projeto seguem um padrão técnico definido para garantir consistência visual, desempenho e compatibilidade entre dispositivos.
+
+### Padrão adotado
+- **Dimensão base:** `800x600 px`
+- **Proporção (aspect ratio):** `4:3`
+- **Formato:** `WebP`
+- **Qualidade:** ~`60%`
+
+### Objetivos
+
+1. **Uniformidade visual**  
+   A proporção 4:3 evita distorções e desalinhamentos em grids e componentes responsivos.
+
+2. **Performance**  
+   A conversão para WebP com compressão em 60% reduz significativamente o tamanho dos arquivos, diminuindo o tempo de carregamento sem perda perceptível relevante na maioria dos casos.
+
+3. **Responsividade e escalabilidade**  
+   A resolução base de 800x600 é suficiente para exibição em layouts padrão e pode ser facilmente redimensionada via CSS sem comprometer a nitidez em contextos comuns.
+
+### Observação técnica
+Sempre que possível, as imagens são redimensionadas e comprimidas previamente (build-time), evitando processamento em tempo de execução.
+
+---
+
 ## 3. Funcionamento do Sistema de Busca (`search.js`)
 
 A busca foi projetada para ser simples, eficiente e tolerante a variações de escrita.
