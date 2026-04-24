@@ -281,9 +281,6 @@ body {
 }
 
 /* --- Elementos Globais --- */
-.navbar {
-    background: linear-gradient(135deg, var(--cerrado-green) 0%, var(--cerrado-green-dark) 100%) !important;
-}
 
 .accordion-button:not(.collapsed) {
     background-color: rgba(45, 80, 22, 0.1);

@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Verde | Agricultura Familiar Sustentável</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/navbar.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/info-cards.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/guias.css">
+    <script src="../../js/search.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../../../index.html">
+                <i class="bi bi-leaf"></i>
+                Guia Verde
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../../index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../pages/navbar/sobre.html">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#ambiente">Ambiente</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#adubacao">Adubação</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#defensivos">Defensivos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#epi">EPIs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#ambiental">Meio Ambiente</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#bpa">BPA</a></li>
+                </ul>
+                <form class="d-flex position-relative" role="search" id="searchForm">
+                    <label for="search" class="visually-hidden">Pesquisar</label>
+                    <input class="form-control me-2"
+                        id="search"
+                        type="search"
+                        placeholder="Buscar prática, solo, adubo, segurança..."
+                        aria-label="Pesquisar"
+                        autocomplete="off">
+                    <button class="btn btn-warning" type="submit">Pesquisar</button>
+                    <div id="suggestions" class="suggestions"></div>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-4">
+        <div class="d-flex mb-3">
+            <button type="button" onclick="history.back()" class="btn btn-secondary">
+                <i class="bi bi-arrow-left"></i> Voltar
+            </button>
+            <a href="../../../index.html" class="btn btn-success ms-auto">
+                Página Inicial
+            </a>
+        </div>
+
+        <!-- Cabeçalho do Guia -->
+        <div class="card mb-4 border-0 shadow-sm bg-success text-white">
+            <div class="card-body py-4">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <h1 class="display-6 fw-bold mb-2">
+                            <i class="bi bi-house-heart me-2"></i>
+                            Agricultura Familiar Sustentável e Segura
+                        </h1>
+                        <p class="lead mb-0">
+                            Guia prático para produção responsável, proteção da saúde e conservação ambiental — foco em pequenos produtores
+                        </p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end mt-3">
+                        <span class="badge bg-light text-dark fs-6 py-2 px-3">
+                            <i class="bi bi-shield-check me-1"></i> Adubação & Defensivos Agrícolas
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Alert Box Princípio -->
+        <div class="alert alert-success alert-mip border-0 shadow-sm mb-4" role="alert">
+            <div class="d-flex">
+                <i class="bi bi-lightbulb-fill fs-4 me-3"></i>
+                <div>
+                    <h5 class="alert-heading fw-bold">Princípio Central</h5>
+                    <p class="mb-0 small">
+                        <strong>Produtividade, saúde e preservação ambiental são pilares interdependentes.</strong> Produzir bem significa colher qualidade, garantir segurança alimentar e cuidar da saúde do produtor, da família e dos trabalhadores — preservando solo, água e biodiversidade para as futuras gerações.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Danger box -->
+        <div class="alert alert-danger border-0 shadow-sm mb-4" role="alert">
+            <div class="d-flex">
+                <i class="bi bi-exclamation-octagon-fill fs-4 me-3"></i>
+                <div>
+                    <h5 class="alert-heading fw-bold">IMPORTANTE!</h5>
+                    <p class="mb-0 small">
+                        Este guia é um recurso educativo baseado em instituições públicas brasileiras. Ele não substitui a assistência técnica personalizada. <strong>Sempre consulte um profissional habilitado</strong> (Emater, engenheiro agrônomo) para recomendações específicas à sua propriedade.
+                    </p>
+                    <p class="mb-0 small mt-2">
+                        <strong>Não há responsabilidade por danos causados</strong> por aplicação inadequada das informações aqui contidas. Práticas inadequadas podem levar à degradação ambiental, contaminação alimentar e riscos à saúde humana e animal.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navegação Rápida -->
+        <section class="card mb-4 border-0 shadow-sm" id="sumario">
+            <div class="card-body">
+                <h3 class="h4 mb-3">📋 Navegação Rápida</h3>
+                <div class="row row-cols-2 row-cols-md-4 g-2 small">
+                    <div class="col"><a class="text-decoration-none text-success fw-medium" href="#ambiente"><i class="bi bi-arrow-right-circle me-1"></i> Entenda seu Ambiente</a></div>
+                    <div class="col"><a class="text-decoration-none text-success fw-medium" href="#adubacao"><i class="bi bi-arrow-right-circle me-1"></i> Manejo da Adubação</a></div>
+                    <div class="col"><a class="text-decoration-none text-success fw-medium" href="#defensivos"><i class="bi bi-arrow-right-circle me-1"></i> Uso de Defensivos</a></div>
+                    <div class="col"><a class="text-decoration-none text-success fw-medium" href="#epi"><i class="bi bi-arrow-right-circle me-1"></i> Equipamentos de Proteção</a></div>
+                    <div class="col"><a class="text-decoration-none text-success fw-medium" href="#ambiental"><i class="bi bi-arrow-right-circle me-1"></i> Proteção Ambiental</a></div>
+                    <div class="col"><a class="text-decoration-none text-success fw-medium" href="#bpa"><i class="bi bi-arrow-right-circle me-1"></i> Boas Práticas (BPA)</a></div>
+                    <div class="col"><a class="text-decoration-none text-success fw-medium" href="#checklist"><i class="bi bi-arrow-right-circle me-1"></i> Checklists</a></div>
+                    <div class="col"><a class="text-decoration-none text-success fw-medium" href="#ajuda"><i class="bi bi-arrow-right-circle me-1"></i> Ajuda Técnica</a></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Entendimento do Ambiente Produtivo -->
+        <section class="card mb-4 border-0 shadow-sm" id="ambiente">
+            <div class="card-header bg-success text-white">
+                <h3 class="h5 mb-0"><i class="bi bi-search me-2"></i>Entenda seu Ambiente Produtivo</h3>
+            </div>
+            <div class="card-body">
+                <p class="text-muted small mb-3">
+                    Antes de qualquer intervenção, observe e diagnostique seu terreno. Esta etapa é a fundação de um manejo racional e sustentável.
+                </p>
+
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <div class="card h-100 border-success-subtle">
+                            <div class="card-body text-center">
+                                <div class="step-number bg-success text-white">1</div>
+                                <h5 class="h6 fw-bold mt-2">Analise o Solo</h5>
+                                <p class="small mb-0">Textura (arenoso/argiloso), cor (matéria orgânica), compactação. A Embrapa recomenda análise laboratorial para uso eficiente de fertilizantes.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-primary-subtle">
+                            <div class="card-body text-center">
+                                <div class="step-number bg-primary text-white">2</div>
+                                <h5 class="h6 fw-bold mt-2">Observe Clima e Relevo</h5>
+                                <p class="small mb-0">Pluviosidade define calendário agrícola. Encostas exigem curvas de nível para evitar erosão. Áreas planas podem encharcar.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-info-subtle">
+                            <div class="card-body text-center">
+                                <div class="step-number bg-info text-white">3</div>
+                                <h5 class="h6 fw-bold mt-2">Monitore Água e Vegetação</h5>
+                                <p class="small mb-0">Proteja nascentes e rios. Vegetação nativa indica qualidade do solo e abriga inimigos naturais de pragas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="visual-diagnosis mt-3">
+                    <h6 class="fw-bold text-success mb-2"><i class="bi bi-lightbulb me-1"></i>Diferencie os Problemas das Plantas</h6>
+                    <p class="small mb-2">
+                        Um diagnóstico correto evita intervenções desnecessárias:
+                    </p>
+                    <ul class="small mb-0 ps-3">
+                        <li><strong>Problema Nutricional:</strong> Sintomas generalizados (amarelecimento = falta de N; bordas queimadas = falta de K)</li>
+                        <li><strong>Praga:</strong> Sinais localizados (folhas mastigadas, insetos visíveis, carunchos)</li>
+                        <li><strong>Doença:</strong> Manchas características, murchamento, apodrecimento (fungos, bactérias, vírus)</li>
+                        <li><strong>Estresse Ambiental:</strong> Danos massivos correlacionados com eventos climáticos (geada, seca, vento)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Manejo Correto da Adubação -->
+        <section class="card mb-4 border-0 shadow-sm" id="adubacao">
+            <div class="card-header bg-warning text-dark">
+                <h3 class="h5 mb-0"><i class="bi bi-flower1 me-2"></i>Manejo Correto da Adubação</h3>
+            </div>
+            <div class="card-body">
+                <p class="text-muted small mb-3">
+                    Aplicar a quantidade certa, na hora certa, no local certo. Excesso de fertilizantes contamina água, saliniza o solo e aumenta custos sem benefício.
+                </p>
+
+                <!-- Tabela Comparativa de Adubação -->
+                <div class="table-responsive mb-3">
+                    <table class="table table-diagnosis table-bordered align-middle mb-0">
+                        <thead>
+                            <tr>
+                                <th>Tipo de Adubo</th>
+                                <th>Vantagens</th>
+                                <th>Cuidados Essenciais</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Esterco Curtido</strong></td>
+                                <td><span class="symptom-tag symptom-biotic">Melhora estrutura do solo</span> <span class="symptom-tag symptom-biotic">Retém água e nutrientes</span></td>
+                                <td><span class="symptom-tag symptom-abiotic">Usar apenas curtido</span> <span class="symptom-tag symptom-abiotic">Evitar esterco fresco</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Composto Caseiro</strong></td>
+                                <td><span class="symptom-tag symptom-biotic">Enriquece com micro-organismos</span> <span class="symptom-tag symptom-biotic">Controla doenças de solo</span></td>
+                                <td><span class="symptom-tag symptom-abiotic">Manter úmido e aerado</span> <span class="symptom-tag symptom-abiotic">Virar regularmente</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Biofertilizantes</strong></td>
+                                <td><span class="symptom-tag symptom-biotic">Fixam nutrientes do ar</span> <span class="symptom-tag symptom-biotic">Solubilizam nutrientes do solo</span></td>
+                                <td><span class="symptom-tag symptom-abiotic">Aplicar no plantio</span> <span class="symptom-tag symptom-abiotic">Proteger do sol forte</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Adubação Verde</strong></td>
+                                <td><span class="symptom-tag symptom-biotic">Cobertura do solo</span> <span class="symptom-tag symptom-biotic">Fixação de nitrogênio</span></td>
+                                <td><span class="symptom-tag symptom-abiotic">Usar EPIs na cortagem</span> <span class="symptom-tag symptom-abiotic">Escolher espécies adaptadas</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="alert alert-info mt-3 mb-0">
+                    <i class="bi bi-info-circle me-2"></i>
+                    <strong>Dica:</strong> A análise de solo é a ferramenta mais importante para um manejo racional. Consulte a Emater para coleta e interpretação do laudo técnico.
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Uso Responsável de Defensivos -->
+        <section class="card mb-4 border-0 shadow-sm" id="defensivos">
+            <div class="card-header bg-danger text-white">
+                <h3 class="h5 mb-0"><i class="bi bi-shield-exclamation me-2"></i>Uso Responsável de Defensivos Agrícolas</h3>
+            </div>
+            <div class="card-body">
+                <p class="text-muted small mb-3">
+                    Defensivos são ferramentas poderosas, mas exigem responsabilidade. Siga rigorosamente a legislação do MAPA e Anvisa.
+                </p>
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="card h-100 border-danger-subtle">
+                            <div class="card-header bg-danger-subtle fw-bold">
+                                <i class="bi bi-check-circle me-1"></i>Regras Absolutas
+                            </div>
+                            <div class="card-body small">
+                                <ul class="mb-0 ps-3">
+                                    <li><strong>Aplique somente quando necessário:</strong> Monitore antes; nem toda praga justifica intervenção</li>
+                                    <li><strong>Siga o receituário agronômico:</strong> Documento emitido por técnico habilitado com dose, cultura, intervalo de segurança</li>
+                                    <li><strong>Leia a bula e o rótulo:</strong> Fonte oficial de informações sobre toxicidade, dose, cultura permitida</li>
+                                    <li><strong>Nunca aumente a dose por conta própria:</strong> Aumenta risco de intoxicação e contaminação ambiental</li>
+                                    <li><strong>Nunca misture produtos sem orientação:</strong> Pode causar reações perigosas ou perda de eficácia</li>
+                                    <li><strong>Evite aplicar próximo a rios, nascentes, casas:</strong> A deriva contamina água e afeta saúde humana e animal</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card h-100 border-warning-subtle">
+                            <div class="card-header bg-warning-subtle fw-bold">
+                                <i class="bi bi-clock me-1"></i>Condições Ideais de Aplicação
+                            </div>
+                            <div class="card-body small">
+                                <ul class="mb-0 ps-3">
+                                    <li><strong>Horário:</strong> Manhã cedo ou final da tarde (evitar 10h-16h)</li>
+                                    <li><strong>Vento:</strong> Ausência ou vento fraco (&lt; 15 km/h) para evitar deriva</li>
+                                    <li><strong>Temperatura:</strong> Entre 18°C e 28°C</li>
+                                    <li><strong>Umidade:</strong> Acima de 60% reduz volatilização</li>
+                                    <li><strong>Chuva:</strong> Sem previsão nas próximas 24 horas</li>
+                                    <li><strong>Intervalo de Segurança (IS):</strong> Tempo mínimo entre última aplicação e colheita</li>
+                                    <li><strong>Período de Reentrada (PR):</strong> Tempo para retorno seguro à área tratada</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert alert-warning mt-3 mb-0">
+                    <i class="bi bi-exclamation-triangle me-2"></i>
+                    <strong>Atenção:</strong> Uso excessivo seleciona pragas resistentes. Rotacione produtos com modos de ação diferentes e priorize o Manejo Integrado de Pragas (MIP).
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Equipamentos de Proteção Individual -->
+        <section class="card mb-4 border-0 shadow-sm" id="epi">
+            <div class="card-header bg-info text-white">
+                <h3 class="h5 mb-0">
+                    <i class="bi bi-person-shield me-2"></i>
+                    Equipamentos de Proteção Individual (EPI)
+                </h3>
+            </div>
+
+            <div class="card-body">
+                <p class="text-muted small mb-3">
+                    EPIs são a última linha de defesa contra exposição a substâncias químicas. A NR-31 exige fornecimento e uso adequado.
+                </p>
+
+                <div class="row g-3">
+
+                    <!-- Luvas -->
+                    <div class="col-md-4">
+                        <div class="card-body d-flex align-items-center gap-3">
+                            <img src="../../img/guias/icon/luva.webp" alt=""
+                                class="object-fit-cover rounded"
+                                style="width: 80px; height: auto;">
+                            <div>
+                                <h6 class="fw-bold mb-2">Luvas</h6>
+                                <p class="small mb-1">
+                                    Nitrila, neoprene ou vinil, resistentes ao produto. Use luvas internas de algodão para absorver suor.
+                                </p>
+                                <span class="badge bg-info-subtle text-info">
+                                    Verifique rasgos • Lave após uso
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Botas -->
+                    <div class="col-md-4">
+                        <div class="card-body d-flex align-items-center gap-3">
+                            <img src="../../img/guias/icon/bota.webp" alt=""
+                                class="object-fit-cover rounded"
+                                style="width: 80px; height: auto;">
+                            <div>
+                                <h6 class="fw-bold mb-2">Botas</h6>
+                                <p class="small mb-1">
+                                    Borracha de cano alto, sola antiderrapante. Protegem pés e pernas de respingos concentrados.
+                                </p>
+                                <span class="badge bg-info-subtle text-info">
+                                    Resistentes • Antiderrapante
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Avental / Macacão -->
+                    <div class="col-md-4">
+                        <div class="card-body d-flex align-items-center gap-3">
+                            <img src="../../img/guias/icon/avental.webp" alt=""
+                                class="object-fit-cover rounded"
+                                style="width: 80px; height: auto;">
+                            <div>
+                                <h6 class="fw-bold mb-2">Avental/Macacão</h6>
+                                <p class="small mb-1">
+                                    Material resistente a químicos. Macacão oferece proteção superior ao avental.
+                                </p>
+                                <span class="badge bg-info-subtle text-info">
+                                    Químico-resistente • Ajuste confortável
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Óculos -->
+                    <div class="col-md-4">
+                        <div class="card-body d-flex align-items-center gap-3">
+                            <img src="../../img/guias/icon/oculos.webp" alt=""
+                                class="object-fit-cover rounded"
+                                style="width: 80px; height: auto;">
+                            <div>
+                                <h6 class="fw-bold mb-2">Óculos de Segurança</h6>
+                                <p class="small mb-1">
+                                    Protegem olhos de respingos. Devem ser antifog e com proteção lateral.
+                                </p>
+                                <span class="badge bg-info-subtle text-info">
+                                    Antifog • Proteção lateral
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Máscara -->
+                    <div class="col-md-4">
+                        <div class="card-body d-flex align-items-center gap-3">
+                            <img src="../../img/guias/icon/mascara.webp" alt=""
+                                class="object-fit-cover rounded"
+                                style="width: 80px; height: auto;">
+                            <div>
+                                <h6 class="fw-bold mb-2">Máscara Respiratória</h6>
+                                <p class="small mb-1">
+                                    Filtro PFF2 para pulverização manual; filtros químicos para maior risco.
+                                </p>
+                                <span class="badge bg-info-subtle text-info">
+                                    Filtro adequado • Ajuste facial
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chapéu -->
+                    <div class="col-md-4">
+                        <div class="card-body d-flex align-items-center gap-3">
+                            <img src="../../img/guias/icon/chapeu.webp" alt=""
+                                class="object-fit-cover rounded"
+                                style="width: 80px; height: auto;">
+                            <div>
+                                <h6 class="fw-bold mb-2">Chapéu Árabe</h6>
+                                <p class="small mb-1">
+                                    Protege couro cabeludo, pescoço e orelhas. Material não poroso e fácil de limpar.
+                                </p>
+                                <span class="badge bg-info-subtle text-info">
+                                    Não poroso • Fácil limpeza
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="alert alert-danger mt-3">
+                    <strong>Sequência correta de vestimenta:</strong>
+                    Luvas internas → luvas externas → botas → macacão → óculos → máscara.
+                    <strong>Retirada invertida:</strong>
+                    Remova itens externos primeiro para evitar contato com a pele.
+                </div>
+
+                <div class="alert alert-info mb-0">
+                    <i class="bi bi-first-aid me-2"></i>
+                    <strong>Em caso de intoxicação:</strong>
+                    Remova EPIs contaminados, lave área afetada com água e sabão por 15 min (pele) ou 15-20 min (olhos).
+                    Busque atendimento médico imediatamente levando o rótulo do produto.
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Proteção Ambiental -->
+        <section class="card mb-4 border-0 shadow-sm" id="ambiental">
+            <div class="card-header bg-success text-white">
+                <h3 class="h5 mb-0"><i class="bi bi-tree me-2"></i>Proteção Ambiental e Conservação</h3>
+            </div>
+            <div class="card-body">
+                <p class="text-muted small mb-3">
+                    A proteção ambiental é obrigação legal e estratégica. Práticas que degradam solo, água e biodiversidade comprometem a própria produção a longo prazo.
+                </p>
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="card h-100 border-success-subtle">
+                            <div class="card-header bg-success-subtle fw-bold">
+                                <i class="bi bi-droplet me-1"></i>Preservação de Água
+                            </div>
+                            <div class="card-body small">
+                                <p><strong>Matas ciliares:</strong> Vegetação nativa às margens de rios filtra sedimentos e agroquímicos, mantém temperatura da água e abriga biodiversidade.</p>
+                                <p><strong>Legislação:</strong> Consulte órgão estadual para larguras mínimas de preservação conforme curso d'água.</p>
+                                <p><strong>Proibido:</strong> Aplicar defensivos próximos a nascentes, rios ou poços artesianos.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card h-100 border-success-subtle">
+                            <div class="card-header bg-success-subtle fw-bold">
+                                <i class="bi bi-recycle me-1"></i>Destinação de Resíduos
+                            </div>
+                            <div class="card-body small">
+                                <p><strong>Embalagens de agrotóxicos:</strong> Tríplice lavagem → esmagar → entregar em ponto de coleta ou retornar ao revendedor.</p>
+                                <p><strong>Nunca:</strong> Reutilizar embalagens para alimentos/bebidas; descartar no lixo comum; queimar.</p>
+                                <p><strong>Resíduos orgânicos:</strong> Compostagem transforma restos em adubo de alto valor.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card h-100 border-success-subtle">
+                            <div class="card-header bg-success-subtle fw-bold">
+                                <i class="bi bi-bug me-1"></i>Proteção da Biodiversidade
+                            </div>
+                            <div class="card-body small">
+                                <p><strong>Abelhas:</strong> Evite aplicar defensivos em floração; prefira produtos com baixa toxicidade para polinizadores.</p>
+                                <p><strong>Inimigos naturais:</strong> Joaninhas, aranhas, sapos e aves controlam pragas naturalmente. Preserve vegetação nativa para abrigá-los.</p>
+                                <p><strong>Barreiras vivas:</strong> Plantar vegetação ao redor da propriedade reduz deriva de defensivos.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card h-100 border-success-subtle">
+                            <div class="card-header bg-success-subtle fw-bold">
+                                <i class="bi bi-arrow-down-up me-1"></i>Conservação do Solo
+                            </div>
+                            <div class="card-body small">
+                                <p><strong>Curvas de nível:</strong> Plantar seguindo linhas de mesma altitude retém água e solo em encostas.</p>
+                                <p><strong>Cobertura do solo:</strong> Palha ou adubo verde reduz erosão, evaporação e crescimento de plantas daninhas.</p>
+                                <p><strong>Rotação de culturas:</strong> Alternar espécies melhora estrutura do solo e quebra ciclos de pragas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Boas Práticas Agrícolas -->
+        <section class="card mb-4 border-0 shadow-sm" id="bpa">
+            <div class="card-header bg-primary text-white">
+                <h3 class="h5 mb-0"><i class="bi bi-check2-circle me-2"></i>Boas Práticas Agrícolas (BPA) e Agroecologia</h3>
+            </div>
+            <div class="card-body">
+                <p class="text-muted small mb-3">
+                    BPA é um sistema integrado que garante alimentos seguros, sustentabilidade ambiental e melhores condições de trabalho. Para o pequeno produtor, significa pensar na propriedade como um ecossistema vivo.
+                </p>
+
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <div class="card h-100 border-primary-subtle">
+                            <div class="card-header bg-primary-subtle fw-bold">
+                                <i class="bi bi-arrow-repeat me-1"></i>Rotação de Culturas
+                            </div>
+                            <div class="card-body small">
+                                <p class="mb-2">Alternar espécies na mesma área ao longo do tempo (ex: milho → feijão → soja).</p>
+                                <ul class="mb-0 ps-3 small">
+                                    <li>Quebra ciclos de pragas e doenças</li>
+                                    <li>Melhora estrutura do solo</li>
+                                    <li>Utiliza diferentes nutrientes, evitando esgotamento</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card h-100 border-primary-subtle">
+                            <div class="card-header bg-primary-subtle fw-bold">
+                                <i class="bi bi-grid-3x3-gap me-1"></i>Consórcio de Culturas
+                            </div>
+                            <div class="card-body small">
+                                <p class="mb-2">Cultivar duas ou mais espécies juntas (ex: milho + feijão).</p>
+                                <ul class="mb-0 ps-3 small">
+                                    <li>Feijão fixa nitrogênio, beneficiando o milho</li>
+                                    <li>Otimiza uso do espaço e luz solar</li>
+                                    <li>Reduz crescimento de plantas daninhas</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card h-100 border-primary-subtle">
+                            <div class="card-header bg-primary-subtle fw-bold">
+                                <i class="bi bi-arrow-up-circle me-1"></i>Plantio Direto
+                            </div>
+                            <div class="card-body small">
+                                <p class="mb-2">Semear diretamente sobre palha da safra anterior, sem arar ou gradear.</p>
+                                <ul class="mb-0 ps-3 small">
+                                    <li>Reduz erosão e evaporação de água</li>
+                                    <li>Controla plantas daninhas naturalmente</li>
+                                    <li>Enriquece solo com matéria orgânica ao decompor</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert alert-success mt-3 mb-0">
+                    <i class="bi bi-lightbulb me-2"></i>
+                    <strong>Transição para Agroecologia:</strong> Comece gradualmente: diversifique produção, implante agroflorestas, use compostagem e biofertilizantes. A certificação orgânica exige exclusão total de agroquímicos sintéticos e auditorias periódicas — processo que leva 2-3 anos.
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Checklist de Campo -->
+        <section class="card mb-4 border-0 shadow-sm" id="checklist">
+            <div class="card-header bg-dark text-white">
+                <h3 class="h5 mb-0"><i class="bi bi-clipboard-check me-2"></i>Checklists Práticos</h3>
+            </div>
+            <div class="card-body">
+                <p class="text-muted small mb-3">
+                    Use estes checklists para organizar suas atividades e garantir segurança e boas práticas.
+                </p>
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="card h-100 border-dark-subtle">
+                            <div class="card-header bg-dark-subtle fw-bold">✅ Antes de Adubar</div>
+                            <div class="card-body small">
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk1">
+                                    <label class="form-check-label" for="chk1">Consultei laudo de análise de solo ou receituário agronômico</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk2">
+                                    <label class="form-check-label" for="chk2">Área identificada sem risco de contaminação de nascentes/rios</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk3">
+                                    <label class="form-check-label" for="chk3">Condições climáticas: sem chuva prevista nas 24h seguintes</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk4">
+                                    <label class="form-check-label" for="chk4">Equipamentos de aplicação verificados e funcionando</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100 border-dark-subtle">
+                            <div class="card-header bg-dark-subtle fw-bold">✅ Antes de Aplicar Defensivos</div>
+                            <div class="card-body small">
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk5">
+                                    <label class="form-check-label" for="chk5">Li e entendi bula/rótulo; conheço Intervalo de Segurança (IS)</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk6">
+                                    <label class="form-check-label" for="chk6">Diagnóstico confirmado; seguindo receituário agronômico</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk7">
+                                    <label class="form-check-label" for="chk7">Clima adequado: sem vento forte; evitar 10h-16h</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk8">
+                                    <label class="form-check-label" for="chk8">EPIs completos vestidos (luvas, botas, macacão, óculos, máscara)</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100 border-dark-subtle">
+                            <div class="card-header bg-dark-subtle fw-bold">✅ Depois da Aplicação</div>
+                            <div class="card-body small">
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk9">
+                                    <label class="form-check-label" for="chk9">Tríplice lavagem das embalagens vazias realizada</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk10">
+                                    <label class="form-check-label" for="chk10">Embalagens descartadas em ponto de coleta adequado</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk11">
+                                    <label class="form-check-label" for="chk11">Corpo lavado com água e sabão após retirar EPIs</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk12">
+                                    <label class="form-check-label" for="chk12">EPIs lavados e guardados em local limpo e seco</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100 border-dark-subtle">
+                            <div class="card-header bg-dark-subtle fw-bold">✅ Cuidados Ambientais</div>
+                            <div class="card-body small">
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk13">
+                                    <label class="form-check-label" for="chk13">Matas ciliares e nascentes preservadas</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk14">
+                                    <label class="form-check-label" for="chk14">Práticas de conservação do solo em encostas (curvas de nível)</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk15">
+                                    <label class="form-check-label" for="chk15">Compostagem de resíduos orgânicos da propriedade</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk16">
+                                    <label class="form-check-label" for="chk16">Evitar agrotóxicos próximos a floração para proteger abelhas</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert alert-success mt-3 mb-0">
+                    <strong>Dica:</strong> Mantenha um diário de campo simples: anote datas de plantio, chuvas, incidência de pragas e resultados. Aprender com o passado melhora decisões futuras.
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Ajuda Técnica -->
+        <section class="card mb-4 border-0 shadow-sm" id="ajuda">
+            <div class="card-header bg-secondary text-white">
+                <h3 class="h5 mb-0"><i class="bi bi-people me-2"></i>Canais de Apoio Técnico</h3>
+            </div>
+            <div class="card-body">
+                <p class="text-muted small mb-3">
+                    Não hesite em buscar ajuda. Instituições públicas oferecem suporte gratuito ou a baixo custo para pequenos produtores.
+                </p>
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="institution-card">
+                            <h5 class="fw-bold text-success mb-2">
+                                <i class="bi bi-building me-1"></i>Emater/ATER Estaduais
+                            </h5>
+                            <p class="small mb-2">
+                                <strong>O que oferece:</strong> Assistência técnica personalizada, diagnóstico de campo, receituário agronômico, treinamentos em BPA e MIP.
+                            </p>
+                            <p class="small mb-2">
+                                <strong>Como acessar:</strong>
+                            </p>
+                            <ul class="small mb-0 ps-3">
+                                <li>Procure o escritório regional mais próximo</li>
+                                <li>Agende visita técnica para diagnóstico in loco</li>
+                                <li>Solicite orientação para análise de solo e calagem</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="institution-card">
+                            <h5 class="fw-bold text-success mb-2">
+                                <i class="bi bi-flower1 me-1"></i>Embrapa
+                            </h5>
+                            <p class="small mb-2">
+                                <strong>O que oferece:</strong> Pesquisa aplicada, variedades adaptadas, publicações técnicas, guias de manejo para diferentes biomas.
+                            </p>
+                            <p class="small mb-2">
+                                <strong>Como acessar:</strong>
+                            </p>
+                            <ul class="small mb-0 ps-3">
+                                <li>Site: <a href="https://www.embrapa.br" target="_blank" class="text-decoration-none">embrapa.br</a></li>
+                                <li>Biblioteca online com guias gratuitos</li>
+                                <li>Eventos e dias de campo abertos ao público</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="institution-card">
+                            <h5 class="fw-bold text-primary mb-2">
+                                <i class="bi bi-book me-1"></i>Ministério da Agricultura (MAPA)
+                            </h5>
+                            <p class="small mb-2">
+                                <strong>O que oferece:</strong> Regulamentação de defensivos, programas de certificação orgânica, normas de Boas Práticas Agrícolas.
+                            </p>
+                            <p class="small mb-2">
+                                <strong>Como acessar:</strong>
+                            </p>
+                            <ul class="small mb-0 ps-3">
+                                <li>Site: <a href="https://www.gov.br/agricultura" target="_blank" class="text-decoration-none">gov.br/agricultura</a></li>
+                                <li>Consulta a produtos registrados e restrições de uso</li>
+                                <li>Informações sobre certificação orgânica</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="institution-card">
+                            <h5 class="fw-bold text-info mb-2">
+                                <i class="bi bi-shield me-1"></i>Órgãos Ambientais (Ibama/Estaduais)
+                            </h5>
+                            <p class="small mb-2">
+                                <strong>O que oferece:</strong> Orientação sobre legislação ambiental, preservação de nascentes, matas ciliares e destinação de resíduos.
+                            </p>
+                            <p class="small mb-2">
+                                <strong>Como acessar:</strong>
+                            </p>
+                            <ul class="small mb-0 ps-3">
+                                <li>Consulte o órgão ambiental do seu estado</li>
+                                <li>Verifique exigências para APP e Reserva Legal</li>
+                                <li>Obtenha orientações sobre licenciamento quando necessário</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert alert-info mt-3 mb-0">
+                    <i class="bi bi-info-circle me-2"></i>
+                    <strong>Antes de consultar:</strong> Leve amostras (solo, folhas, insetos), fotos dos sintomas, histórico da área e anote suas dúvidas. Isso torna a assistência mais eficiente.
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Glossário -->
+        <section class="card mb-4 border-0 shadow-sm" id="glossario">
+            <div class="card-header bg-secondary text-white">
+                <h3 class="h5 mb-0"><i class="bi bi-book-half me-2"></i>Glossário Essencial</h3>
+            </div>
+            <div class="card-body">
+                <div class="row g-0">
+                    <div class="col-md-6 pe-md-3">
+                        <div class="border-bottom py-2 small"><strong>BPA:</strong> Boas Práticas Agrícolas — conjunto de ações para produção segura, sustentável e de qualidade.</div>
+                        <div class="border-bottom py-2 small"><strong>MIP:</strong> Manejo Integrado de Pragas — estratégia que combina métodos preventivos, culturais, biológicos e químicos de forma racional.</div>
+                        <div class="border-bottom py-2 small"><strong>Receituário Agronômico:</strong> Documento emitido por profissional habilitado com instruções para uso seguro e eficaz de defensivos.</div>
+                        <div class="border-bottom py-2 small"><strong>Intervalo de Segurança (IS):</strong> Tempo mínimo entre última aplicação de defensivo e colheita para garantir segurança alimentar.</div>
+                        <div class="border-bottom py-2 small"><strong>Período de Reentrada (PR):</strong> Tempo que deve passar após aplicação para retorno seguro à área tratada.</div>
+                        <div class="border-bottom py-2 small"><strong>Deriva:</strong> Transporte de produto pelo vento para áreas não-alvo (casas, rios, outras lavouras).</div>
+                    </div>
+                    <div class="col-md-6 ps-md-3">
+                        <div class="border-bottom py-2 small"><strong>Calagem:</strong> Aplicação de calcário para corrigir acidez do solo e melhorar disponibilidade de nutrientes.</div>
+                        <div class="border-bottom py-2 small"><strong>Adubação Verde:</strong> Plantio de espécies (crotalária, mucuna) para cobertura do solo e fixação de nitrogênio.</div>
+                        <div class="border-bottom py-2 small"><strong>Tríplice Lavagem:</strong> Procedimento obrigatório para lavagem de embalagens vazias de agrotóxicos antes do descarte.</div>
+                        <div class="border-bottom py-2 small"><strong>Curvas de Nível:</strong> Plantio seguindo linhas de mesma altitude para reter água e solo em áreas inclinadas.</div>
+                        <div class="border-bottom py-2 small"><strong>Agroecologia:</strong> Sistema de produção que integra conhecimentos tradicionais e científicos para sustentabilidade ambiental e social.</div>
+                        <div class="py-2 small"><strong>Inimigos Naturais:</strong> Organismos que controlam pragas naturalmente (joaninhas, vespas parasitoides, ácaros predadores).</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Alerta Final -->
+        <div class="alert alert-warning d-flex align-items-center shadow-sm">
+            <i class="bi bi-exclamation-triangle fs-3 me-3"></i>
+            <div>
+                <strong>Atenção:</strong> Este guia é uma ferramenta educativa baseada em instituições públicas brasileiras. Diagnósticos complexos, surtos severos ou dúvidas persistentes exigem consulta com profissional habilitado. A agricultura é dinâmica — adapte as recomendações à realidade da sua propriedade, registrando resultados para aprimorar suas práticas a cada ciclo.
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="py-5 bg-light border-top">
+        <div class="container text-center">
+            <p class="text-muted fw-bold mb-1">Guia Verde – 2026</p>
+
+            <div class="small text-muted">
+                Fontes e instituições de referência:
+                <a href="https://www.embrapa.br" target="_blank" rel="noopener" class="text-decoration-none text-secondary">Embrapa</a> |
+                <a href="https://www.emater.df.gov.br" target="_blank" rel="noopener" class="text-decoration-none text-secondary">Emater/ATER</a> |
+                <a href="https://www.gov.br/agricultura" target="_blank" rel="noopener" class="text-decoration-none text-secondary">MAPA</a> |
+                <a href="https://www.ibama.gov.br" target="_blank" rel="noopener" class="text-decoration-none text-secondary">Ibama</a>
+            </div>
+
+            <div class="small text-muted mt-2">
+                Conteúdo baseado no guia "Da Fazenda ao Campo: Um Guia de Campo para a Agricultura Familiar Sustentável e Segura", adaptado para pequenos produtores rurais, estudantes e técnicos de campo. Foco em práticas seguras, sustentabilidade ambiental e proteção da saúde.
+            </div>
+
+            <div class="small text-muted mt-2">
+                Este conteúdo foi desenvolvido como parte de um projeto extensivo do curso de Análise e Desenvolvimento de Sistemas, com o objetivo de criar um guia prático e acessível para produtores rurais, estudantes e entusiastas da agricultura. Não possuindo fins comerciais, o Guia Verde é uma iniciativa educacional que visa disseminar conhecimento técnico de forma clara e objetiva, contribuindo para a melhoria das práticas agrícolas e a sustentabilidade no campo.
+            </div>
+        </div>
+    </footer>
+
+    <button 
+        type="button"
+        class="btn btn-success btn-floating btn-lg"
+        id="btn-back-to-top"
+        style="position: fixed; bottom: 20px; right: 20px; display: none; z-index: 1000;"
+        aria-label="Voltar ao topo"
+        title="Voltar ao topo">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/ui-extras.js"></script>
+</body>
+</html>
