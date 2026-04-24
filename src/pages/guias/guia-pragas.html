@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Verde | Manejo Integrado de Pragas e Doenças</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/navbar.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/info-cards.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/guias.css">
+    <script src="../../js/search.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../../../index.html">
+                <i class="bi bi-leaf"></i>
+                Guia Verde
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../../index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../pages/navbar/sobre.html">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#mip">MIP</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#diagnostico">Diagnóstico</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pragas">Pragas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#doencas">Doenças</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#controle">Controle</a></li>
+                </ul>
+                <form class="d-flex position-relative" role="search" id="searchForm">
+                    <label for="search" class="visually-hidden">Pesquisar</label>
+                    <input class="form-control me-2"
+                        id="search"
+                        type="search"
+                        placeholder="Buscar praga, doença, cultura ou sintoma..."
+                        aria-label="Pesquisar"
+                        autocomplete="off">
+                    <button class="btn btn-warning" type="submit">Pesquisar</button>
+                    <div id="suggestions" class="suggestions"></div>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-4">
+        <div class="d-flex mb-3">
+            <button type="button" onclick="history.back()" class="btn btn-secondary">
+                <i class="bi bi-arrow-left"></i> Voltar
+            </button>
+            <a href="../../../index.html" class="btn btn-success ms-auto">
+                Página Inicial
+            </a>
+        </div>
+
+        <!-- Cabeçalho do Guia -->
+        <div class="card mb-4 border-0 shadow-sm bg-success text-white">
+            <div class="card-body py-4">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <h1 class="display-6 fw-bold mb-2">
+                            <i class="bi bi-bug me-2"></i>
+                            Manejo Integrado de Pragas e Doenças
+                        </h1>
+                        <p class="lead mb-0">
+                            Guia visual para identificação e controle sustentável em hortaliças do DF — foco em pequenas propriedades
+                        </p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end mt-3">
+                        <span class="badge bg-light text-dark fs-6 py-2 px-3">
+                            <i class="bi bi-shield-check me-1"></i> MIP + Agroecologia
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Alert Box MIP -->
+        <div class="alert alert-success alert-mip border-0 shadow-sm mb-4" role="alert">
+            <div class="d-flex">
+                <i class="bi bi-lightbulb-fill fs-4 me-3"></i>
+                <div>
+                    <h5 class="alert-heading fw-bold">Princípio do MIP</h5>
+                    <p class="mb-0 small">
+                        <strong>Nem toda praga precisa ser eliminada!</strong> O objetivo é manter a população abaixo do <em>nível econômico de dano</em> — a menor densidade que causa prejuízo financeiro. Isso preserva inimigos naturais, reduz custos com agrotóxicos e protege sua saúde e o meio ambiente.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Danger box -->
+        <div class="alert alert-danger border-0 shadow-sm mb-4" role="alert">
+            <div class="d-flex">
+                <i class="bi bi-exclamation-octagon-fill fs-4 me-3"></i>
+                <div>
+                    <h5 class="alert-heading fw-bold">IMPORTANTE!</h5>
+                    <p class="mb-0 small">
+                        Este guia é um recurso técnico baseado em evidências para auxiliar no manejo de plantas daninhas. Ele não substitui a assistência técnica personalizada. <strong>Sempre consulte um profissional habilitado</strong> para recomendações específicas à sua propriedade, considerando as condições locais e características do seu sistema produtivo.
+                    </p>
+                    <p class="mb-0 small mt-2">
+                        <strong>Não há responsabilidade por danos causados</strong> por aplicação inadequada das informações aqui contidas. O manejo de pragas e doenças deve ser realizado com cuidado, seguindo as melhores práticas e orientações técnicas para garantir a sustentabilidade do sistema produtivo e a segurança do produtor.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navegação Rápida -->
+        <section class="card mb-4 border-0 shadow-sm" id="sumario">
+            <div class="card-body">
+                <h3 class="h4 mb-3">📋 Navegação Rápida</h3>
+                <div class="row row-cols-2 row-cols-md-4 g-2 small">
+                    <div class="col"><a class="text-decoration-none text-success fw-medium" href="#mip"><i class="bi bi-arrow-right-circle me-1"></i> Fundamentos MIP</a></div>
+                    <div class="col"><a class="text-decoration-none text-success fw-medium" href="#monitoramento"><i class="bi bi-arrow-right-circle me-1"></i> Monitoramento</a></div>
+                    <div class="col"><a class="text-decoration-none text-success fw-medium" href="#diagnostico"><i class="bi bi-arrow-right-circle me-1"></i> Diagnóstico Visual</a></div>
+                    <div class="col"><a class="text-decoration-none text-success fw-medium" href="#pragas"><i class="bi bi-arrow-right-circle me-1"></i> Pragas Comuns</a></div>
+                    <div class="col"><a class="text-decoration-none text-success fw-medium" href="#doencas"><i class="bi bi-arrow-right-circle me-1"></i> Doenças</a></div>
+                    <div class="col"><a class="text-decoration-none text-success fw-medium" href="#controle"><i class="bi bi-arrow-right-circle me-1"></i> Controle Agroecológico</a></div>
+                    <div class="col"><a class="text-decoration-none text-success fw-medium" href="#culturas"><i class="bi bi-arrow-right-circle me-1"></i> Por Cultura</a></div>
+                    <div class="col"><a class="text-decoration-none text-success fw-medium" href="#ajuda"><i class="bi bi-arrow-right-circle me-1"></i> Ajuda Técnica</a></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Fundamentos do MIP -->
+        <section class="card mb-4 border-0 shadow-sm" id="mip">
+            <div class="card-header bg-success text-white">
+                <h3 class="h5 mb-0"><i class="bi bi-shield-check me-2"></i>Fundamentos do Manejo Integrado de Pragas (MIP)</h3>
+            </div>
+            <div class="card-body">
+                <p class="text-muted small mb-3">
+                    O MIP é uma estratégia holística que combina métodos preventivos, culturais, biológicos e, quando necessário, químicos de baixo impacto. Para o pequeno produtor, significa mudar de uma postura <strong>reativa</strong> (aplicar agrotóxico quando vê a praga) para uma postura <strong>proativa</strong> (prevenir e manter o equilíbrio do ecossistema).
+                </p>
+
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <div class="card h-100 border-success-subtle">
+                            <div class="card-body text-center">
+                                <div class="step-number">1</div>
+                                <h5 class="h6 fw-bold mt-2">Prevenção</h5>
+                                <p class="small mb-0">Boas Práticas Agrícolas, sementes resistentes, rotação de culturas, solo saudável</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-primary-subtle">
+                            <div class="card-body text-center">
+                                <div class="step-number">2</div>
+                                <h5 class="h6 fw-bold mt-2">Monitoramento</h5>
+                                <p class="small mb-0">Observação sistemática do campo para detectar problemas antes que se agravem</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-info-subtle">
+                            <div class="card-body text-center">
+                                <div class="step-number">3</div>
+                                <h5 class="h6 fw-bold mt-2">Intervenção Direcionada</h5>
+                                <p class="small mb-0">Apenas quando necessário, priorizando métodos menos agressivos (biológicos, físicos, extratos vegetais)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="visual-diagnosis mt-3">
+                    <h6 class="fw-bold text-success mb-2"><i class="bi bi-lightbulb me-1"></i>Pilar Central: Monitoramento Constante</h6>
+                    <p class="small mb-2">
+                        O monitoramento é a base para decisões informadas. Em vez de pulverizar em datas fixas, aprenda a "ler" suas plantas:
+                    </p>
+                    <ul class="small mb-0 ps-3">
+                        <li><strong>Inspeção visual:</strong> Verifique a face inferior das folhas e brotações novas — locais preferidos de pulgões e ácaros</li>
+                        <li><strong>Use uma lupa de bolso:</strong> Revela organismos microscópicos e sintomas iniciais</li>
+                        <li><strong>Registre observações:</strong> Anote data, local, sintoma e ação tomada para aprender com cada ciclo</li>
+                        <li><strong>Armadilhas adesivas amarelas:</strong> Ferramenta simples para monitorar insetos voadores como mosca-branca e pulgões</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Diagnóstico Visual -->
+        <section class="card mb-4 border-0 shadow-sm" id="diagnostico">
+            <div class="card-header bg-info text-white">
+                <h3 class="h5 mb-0"><i class="bi bi-eye me-2"></i>Diagnóstico Visual: Identificando Sinais e Sintomas</h3>
+            </div>
+            <div class="card-body">
+                <p class="text-muted small mb-3">
+                    Um diagnóstico correto evita tratamentos desnecessários. Entenda a diferença:
+                    <strong>Sinais</strong> = o agente causador visível (fungo, inseto, bactéria); 
+                    <strong>Sintomas</strong> = a alteração na planta (manchas, murcha, deformação).
+                </p>
+
+                <!-- Tabela Comparativa de Sintomas -->
+                <div class="table-responsive mb-3">
+                    <table class="table table-diagnosis table-bordered align-middle mb-0">
+                        <thead>
+                            <tr>
+                                <th>Tipo de Sintoma</th>
+                                <th>Possível Causa Biótica (Organismo Vivo)</th>
+                                <th>Possível Causa Abiótica (Fator Não Vivo)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Manchas angulares/pontiagudas</strong></td>
+                                <td><span class="symptom-tag symptom-biotic">Bactérias (Pseudomonas)</span></td>
+                                <td><span class="symptom-tag symptom-abiotic">Queimadura por salinidade</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Manchas redondas/fofas</strong></td>
+                                <td><span class="symptom-tag symptom-biotic">Fungos (Cladosporium, Alternaria)</span></td>
+                                <td><span class="symptom-tag symptom-abiotic">Excesso de umidade relativa</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Amarelamento generalizado</strong></td>
+                                <td><span class="symptom-tag symptom-biotic">Deficiência de N, Vírus, Pulgões</span></td>
+                                <td><span class="symptom-tag symptom-abiotic">Deficiência de Ferro, drenagem ruim</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Necrose (tecido seco)</strong></td>
+                                <td><span class="symptom-tag symptom-biotic">Fungos, seca do solo</span></td>
+                                <td><span class="symptom-tag symptom-abiotic">Falta de irrigação, temperatura extrema</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Deformações (enrolamento)</strong></td>
+                                <td><span class="symptom-tag symptom-biotic">Ácaros, Pulgões, Vírus</span></td>
+                                <td><span class="symptom-tag symptom-abiotic">Herbicidas voláteis, estresse térmico</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Galhas (tumorações)</strong></td>
+                                <td><span class="symptom-tag symptom-biotic">Nematoides</span></td>
+                                <td><em>—</em></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Furos/raspagens</strong></td>
+                                <td><span class="symptom-tag symptom-biotic">Lagartas, Formigas cortadeiras</span></td>
+                                <td><span class="symptom-tag symptom-abiotic">Roedores, dano mecânico</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Fluxograma de Diagnóstico -->
+                <div class="accordion" id="accordionDiagnostico">
+                    <div class="accordion-item">
+                        <h4 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#passo1">
+                                <span class="step-number">1</span> Observe o padrão do dano
+                            </button>
+                        </h4>
+                        <div id="passo1" class="accordion-collapse collapse show" data-bs-parent="#accordionDiagnostico">
+                            <div class="accordion-body small">
+                                <ul class="mb-0 ps-3">
+                                    <li><strong>Dano localizado em poucas plantas?</strong> → Possível praga específica ou foco de doença</li>
+                                    <li><strong>Dano generalizado em toda a área?</strong> → Possível fator abiótico (clima, solo, manejo)</li>
+                                    <li><strong>Sintomas apenas em folhas novas?</strong> → Possível praga sugadora (pulgão, ácaro) ou vírus</li>
+                                    <li><strong>Sintomas em folhas velhas?</strong> → Possível deficiência nutricional ou doença de solo</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h4 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#passo2">
+                                <span class="step-number">2</span> Inspecione a planta com lupa
+                            </button>
+                        </h4>
+                        <div id="passo2" class="accordion-collapse collapse" data-bs-parent="#accordionDiagnostico">
+                            <div class="accordion-body small">
+                                <p class="mb-2"><strong>Onde olhar:</strong></p>
+                                <ul class="mb-2 ps-3">
+                                    <li>Face inferior das folhas (pulgões, ácaros, ovos de insetos)</li>
+                                    <li>Brotos novos e meristemos (sintomas iniciais de vírus)</li>
+                                    <li>Base do caule e solo próximo (formigas, nematoides, podridões)</li>
+                                    <li>Frutos e flores (lagartas, moscas, manchas)</li>
+                                </ul>
+                                <p class="mb-0"><strong>O que procurar:</strong> insetos vivos, teias finas, exsudação viscosa, mofo, ovos, galhas.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h4 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#passo3">
+                                <span class="step-number">3</span> Avalie condições ambientais e de manejo
+                            </button>
+                        </h4>
+                        <div id="passo3" class="accordion-collapse collapse" data-bs-parent="#accordionDiagnostico">
+                            <div class="accordion-body small">
+                                <p class="mb-2"><strong>Perguntas-chave:</strong></p>
+                                <ul class="mb-0 ps-3">
+                                    <li>Choveu muito ou faltou água recentemente?</li>
+                                    <li>Aplicou algum produto (adubo, defensivo) nas últimas 48h?</li>
+                                    <li>A temperatura esteve muito alta ou baixa?</li>
+                                    <li>Houve vento forte que possa ter causado deriva de herbicida?</li>
+                                    <li>O solo está compactado ou mal drenado?</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert alert-info mt-3 mb-0">
+                    <i class="bi bi-info-circle me-2"></i>
+                    <strong>Dica:</strong> Quando em dúvida, tire fotos nítidas do sintoma (de perto e de longe), anote a data e as condições climáticas, e envie para consulta técnica. Isso acelera o diagnóstico correto.
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Pragas Comuns -->
+        <section class="card mb-4 border-0 shadow-sm" id="pragas">
+            <div class="card-header bg-danger text-white">
+                <h3 class="h5 mb-0"><i class="bi bi-bug me-2"></i>Pragas Comuns em Hortaliças do DF</h3>
+            </div>
+            <div class="card-body">
+                <p class="text-muted small mb-3">
+                    Clique em cada praga para ver detalhes: culturas afetadas, sintomas-chave e estratégias de controle agroecológico.
+                </p>
+
+                <div class="row g-3" id="pestGrid">
+                    <!-- Pulgões -->
+                    <div class="col-md-6 col-lg-4 pest-card" data-crops="alface,repolho,tomate,cebolinha">
+                        <div class="card shadow-sm h-100">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="card-title fw-bold text-danger mb-0">
+                                        <i class="bi bi-bug-fill me-1"></i>Pulgões (Áfidos)
+                                    </h5>
+                                    <span class="badge severity-high">Alto</span>
+                                </div>
+                                <div class="species-image-placeholder rounded overflow-hidden mb-3">
+                                    <img src="../../img/guias/pulgao.webp"
+                                        alt="Capim-amargoso (Digitaria insularis)"
+                                        class="w-100 h-100 object-fit-cover d-block rounded">
+                                </div>
+                                <p class="card-text small mb-2">
+                                    <strong>Culturas:</strong> Alface, Repolho, Tomate, Cebolinha
+                                </p>
+                                <div class="mb-2">
+                                    <small class="text-muted d-block">Sintomas-chave:</small>
+                                    <div>
+                                        <span class="symptom-tag symptom-biotic">Amarelamento</span>
+                                        <span class="symptom-tag symptom-biotic">Enrolamento de folhas</span>
+                                        <span class="symptom-tag symptom-biotic">Melada e fumagina</span>
+                                    </div>
+                                </div>
+                                <div class="mb-2">
+                                    <small class="text-muted d-block">Controle agroecológico:</small>
+                                    <div>
+                                        <span class="badge control-badge control-low">Joaninhas (inimigos naturais)</span>
+                                        <span class="badge control-badge control-low">Sabão potássico</span>
+                                        <span class="badge control-badge control-medium">Armadilhas amarelas</span>
+                                    </div>
+                                </div>
+                                <button class="btn btn-sm btn-outline-success w-100" data-bs-toggle="collapse" data-bs-target="#detalhe-pulgoes">
+                                    Ver detalhes ▼
+                                </button>
+                                <div class="collapse mt-2" id="detalhe-pulgoes">
+                                    <small class="text-muted">
+                                        <strong>Dica:</strong> Preserve joaninhas e crisopídeos evitando inseticidas de amplo espectro. Aplique calda de sabão (10g sabão neutro + 1L água) no final da tarde, repetindo a cada 5-7 dias se necessário.
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lagartas -->
+                    <div class="col-md-6 col-lg-4 pest-card" data-crops="tomate,pepino,mandioca,couve,repolho">
+                        <div class="card shadow-sm h-100">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="card-title fw-bold text-danger mb-0">
+                                        <i class="bi bi-bug-fill me-1"></i>Lagartas Mastigadoras
+                                    </h5>
+                                    <span class="badge severity-critical">Crítico</span>
+                                </div>
+                                <div class="species-image-placeholder rounded overflow-hidden mb-3">
+                                    <img src="../../img/guias/lagartas.webp"
+                                        alt="Capim-amargoso (Digitaria insularis)"
+                                        class="w-100 h-100 object-fit-cover d-block rounded">
+                                </div>
+                                <p class="card-text small mb-2">
+                                    <strong>Culturas:</strong> Tomate, Pepino, Mandioca, Couve, Repolho
+                                </p>
+                                <div class="mb-2">
+                                    <small class="text-muted d-block">Sintomas-chave:</small>
+                                    <div>
+                                        <span class="symptom-tag symptom-biotic">Furos grandes</span>
+                                        <span class="symptom-tag symptom-biotic">Raspagens</span>
+                                        <span class="symptom-tag symptom-biotic">Excrementos (frass)</span>
+                                    </div>
+                                </div>
+                                <div class="mb-2">
+                                    <small class="text-muted d-block">Controle agroecológico:</small>
+                                    <div>
+                                        <span class="badge control-badge control-low">Bacillus thuringiensis (Bt)</span>
+                                        <span class="badge control-badge control-low">Malhas de proteção</span>
+                                        <span class="badge control-badge control-medium">Coleta manual</span>
+                                    </div>
+                                </div>
+                                <button class="btn btn-sm btn-outline-success w-100" data-bs-toggle="collapse" data-bs-target="#detalhe-lagartas">
+                                    Ver detalhes ▼
+                                </button>
+                                <div class="collapse mt-2" id="detalhe-lagartas">
+                                    <small class="text-muted">
+                                        <strong>Dica:</strong> Para a traça-do-tomate (Tuta absoluta), use armadilhas com feromônio sexual para monitoramento. O Bt é mais eficaz em lagartas jovens — aplique ao entardecer.
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mosca-Branca -->
+                    <div class="col-md-6 col-lg-4 pest-card" data-crops="tomate,pepino,pimentao,beterraba">
+                        <div class="card shadow-sm h-100">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="card-title fw-bold text-warning mb-0">
+                                        <i class="bi bi-bug-fill me-1"></i>Mosca-Branca
+                                    </h5>
+                                    <span class="badge severity-high">Alto</span>
+                                </div>
+                                <div class="species-image-placeholder rounded overflow-hidden mb-3">
+                                    <img src="../../img/guias/mosca-branca.webp"
+                                        alt="Capim-amargoso (Digitaria insularis)"
+                                        class="w-100 h-100 object-fit-cover d-block rounded">
+                                </div>
+                                <p class="card-text small mb-2">
+                                    <strong>Culturas:</strong> Tomate, Pepino, Pimentão, Beterraba
+                                </p>
+                                <div class="mb-2">
+                                    <small class="text-muted d-block">Sintomas-chave:</small>
+                                    <div>
+                                        <span class="symptom-tag symptom-biotic">Amarelamento inferior</span>
+                                        <span class="symptom-tag symptom-biotic">Melada</span>
+                                        <span class="symptom-tag symptom-biotic">Transmissão de vírus</span>
+                                    </div>
+                                </div>
+                                <div class="mb-2">
+                                    <small class="text-muted d-block">Controle agroecológico:</small>
+                                    <div>
+                                        <span class="badge control-badge control-low">Bordaduras com néctar</span>
+                                        <span class="badge control-badge control-medium">Armadilhas amarelas</span>
+                                        <span class="badge control-badge control-medium">Óleo mineral</span>
+                                    </div>
+                                </div>
+                                <button class="btn btn-sm btn-outline-success w-100" data-bs-toggle="collapse" data-bs-target="#detalhe-moscabranca">
+                                    Ver detalhes ▼
+                                </button>
+                                <div class="collapse mt-2" id="detalhe-moscabranca">
+                                    <small class="text-muted">
+                                        <strong>Dica:</strong> Plantar cravo-de-defunto (Tagetes) ou coentro nas bordaduras atrai vespas parasitoides da mosca-branca. Evite aplicações de óleo em horas quentes para não queimar as folhas.
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ácaros -->
+                    <div class="col-md-6 col-lg-4 pest-card" data-crops="tomate,pepino,alface,couve">
+                        <div class="card shadow-sm h-100">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="card-title fw-bold text-warning mb-0">
+                                        <i class="bi bi-bug-fill me-1"></i>Ácaros (Tetranychus)
+                                    </h5>
+                                    <span class="badge severity-medium">Médio</span>
+                                </div>
+                                <div class="species-image-placeholder rounded overflow-hidden mb-3">
+                                    <img src="../../img/guias/acaro.webp"
+                                        alt="Capim-amargoso (Digitaria insularis)"
+                                        class="w-100 h-100 object-fit-cover d-block rounded">
+                                </div>
+                                <p class="card-text small mb-2">
+                                    <strong>Culturas:</strong> Tomate, Pepino, Alface, Couve
+                                </p>
+                                <div class="mb-2">
+                                    <small class="text-muted d-block">Sintomas-chave:</small>
+                                    <div>
+                                        <span class="symptom-tag symptom-biotic">Pontos amarelados</span>
+                                        <span class="symptom-tag symptom-biotic">Teias finas</span>
+                                        <span class="symptom-tag symptom-biotic">Necrose foliar</span>
+                                    </div>
+                                </div>
+                                <div class="mb-2">
+                                    <small class="text-muted d-block">Controle agroecológico:</small>
+                                    <div>
+                                        <span class="badge control-badge control-low">Aumento de umidade</span>
+                                        <span class="badge control-badge control-low">Óleo mineral</span>
+                                        <span class="badge control-badge control-medium">Predadores naturais</span>
+                                    </div>
+                                </div>
+                                <button class="btn btn-sm btn-outline-success w-100" data-bs-toggle="collapse" data-bs-target="#detalhe-acaros">
+                                    Ver detalhes ▼
+                                </button>
+                                <div class="collapse mt-2" id="detalhe-acaros">
+                                    <small class="text-muted">
+                                        <strong>Dica:</strong> Ácaros proliferam em condições secas e quentes. Aspersões leves de água no final da tarde podem reduzir a população. Inimigos naturais como ácaros predadores (Phytoseiulus) são eficazes em cultivos protegidos.
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Formigas Cortadeiras -->
+                    <div class="col-md-6 col-lg-4 pest-card" data-crops="mandioca,alface,beterraba">
+                        <div class="card shadow-sm h-100">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="card-title fw-bold text-danger mb-0">
+                                        <i class="bi bi-bug-fill me-1"></i>Formigas Cortadeiras/Sauvas
+                                    </h5>
+                                    <span class="badge severity-critical">Crítico</span>
+                                </div>
+                                <div class="species-image-placeholder rounded overflow-hidden mb-3">
+                                    <img src="../../img/guias/sauva.webp"
+                                        alt="Capim-amargoso (Digitaria insularis)"
+                                        class="w-100 h-100 object-fit-cover d-block rounded">
+                                </div>
+                                <p class="card-text small mb-2">
+                                    <strong>Culturas:</strong> Mandioca, Alface, Beterraba
+                                </p>
+                                <div class="mb-2">
+                                    <small class="text-muted d-block">Sintomas-chave:</small>
+                                    <div>
+                                        <span class="symptom-tag symptom-biotic">Folhas cortadas</span>
+                                        <span class="symptom-tag symptom-biotic">Montículos de terra</span>
+                                        <span class="symptom-tag symptom-biotic">Trilhas de transporte</span>
+                                    </div>
+                                </div>
+                                <div class="mb-2">
+                                    <small class="text-muted d-block">Controle agroecológico:</small>
+                                    <div>
+                                        <span class="badge control-badge control-low">Remoção manual de olheiros</span>
+                                        <span class="badge control-badge control-medium">Iscas específicas</span>
+                                        <span class="badge control-badge control-low">Manutenção da área limpa</span>
+                                    </div>
+                                </div>
+                                <button class="btn btn-sm btn-outline-success w-100" data-bs-toggle="collapse" data-bs-target="#detalhe-formigas">
+                                    Ver detalhes ▼
+                                </button>
+                                <div class="collapse mt-2" id="detalhe-formigas">
+                                    <small class="text-muted">
+                                        <strong>Dica:</strong> Localize os olheiros principais (entrada do formigueiro) e aplique iscas granuladas específicas para formigas cortadeiras ao entardecer, quando as operárias estão ativas. Mantenha a área ao redor da cultura sem vegetação rasteira para dificultar o acesso.
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nematoides -->
+                    <div class="col-md-6 col-lg-4 pest-card" data-crops="mandioca,alface,cenoura">
+                        <div class="card shadow-sm h-100">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="card-title fw-bold text-warning mb-0">
+                                        <i class="bi bi-bug-fill me-1"></i>Nematoides
+                                    </h5>
+                                    <span class="badge severity-high">Alto</span>
+                                </div>
+                                <div class="species-image-placeholder rounded overflow-hidden mb-3">
+                                    <img src="../../img/guias/nematoides.webp"
+                                        alt="Capim-amargoso (Digitaria insularis)"
+                                        class="w-100 h-100 object-fit-cover d-block rounded">
+                                </div>
+                                <p class="card-text small mb-2">
+                                    <strong>Culturas:</strong> Mandioca, Alface, Cenoura
+                                </p>
+                                <div class="mb-2">
+                                    <small class="text-muted d-block">Sintomas-chave:</small>
+                                    <div>
+                                        <span class="symptom-tag symptom-biotic">Galhas em raízes</span>
+                                        <span class="symptom-tag symptom-biotic">Crescimento retardado</span>
+                                        <span class="symptom-tag symptom-biotic">Amarelamento</span>
+                                    </div>
+                                </div>
+                                <div class="mb-2">
+                                    <small class="text-muted d-block">Controle agroecológico:</small>
+                                    <div>
+                                        <span class="badge control-badge control-low">Rotação de culturas</span>
+                                        <span class="badge control-badge control-low">Solarização do solo</span>
+                                        <span class="badge control-badge control-medium">Bacillus megaterium</span>
+                                    </div>
+                                </div>
+                                <button class="btn btn-sm btn-outline-success w-100" data-bs-toggle="collapse" data-bs-target="#detalhe-nematoides">
+                                    Ver detalhes ▼
+                                </button>
+                                <div class="collapse mt-2" id="detalhe-nematoides">
+                                    <small class="text-muted">
+                                        <strong>Dica:</strong> A solarização (cobrir o solo úmido com plástico transparente por 4-6 semanas no verão) reduz populações de nematoides. Cultivar crotalária ou mucuna como adubo verde também ajuda no controle biológico.
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Doenças -->
+        <section class="card mb-4 border-0 shadow-sm" id="doencas">
+            <div class="card-header bg-warning text-dark">
+                <h3 class="h5 mb-0"><i class="bi bi-virus me-2"></i>Doenças Biotróficas e Anomalias Fisiológicas</h3>
+            </div>
+            <div class="card-body">
+                <p class="text-muted small mb-3">
+                    Doenças são causadas por patógenos (fungos, bactérias, vírus, nematoides). Anomalias fisiológicas têm causas abióticas (clima, solo, manejo). Distinguir é essencial para o tratamento correto.
+                </p>
+
+                <div class="row g-3">
+                    <!-- Doenças Fúngicas -->
+                    <div class="col-md-6">
+                        <div class="card h-100 border-warning-subtle">
+                            <div class="card-header bg-warning-subtle fw-bold">
+                                <i class="bi bi-flower1 me-1"></i>Doenças Fúngicas
+                            </div>
+                            <div class="card-body small">
+                                <p><strong>Sinais típicos:</strong> Mofo branco/cinza/púrpura, manchas com anéis concêntricos, pó branco (oídio).</p>
+                                <p><strong>Exemplos no DF:</strong></p>
+                                <ul class="mb-2 ps-3">
+                                    <li><strong>Míldio:</strong> Manchas amareladas na face superior, mofo acinzentado na inferior (alface, couve)</li>
+                                    <li><strong>Oídio:</strong> Pó branco em folhas e caules (tomate, pepino)</li>
+                                    <li><strong>Mancha de Alternaria:</strong> Manchas escuras com anéis (repolho, couve)</li>
+                                </ul>
+                                <p><strong>Prevenção e controle:</strong></p>
+                                <ul class="mb-0 ps-3">
+                                    <li>Irrigação por gotejamento (evita molhar folhas)</li>
+                                    <li>Espaçamento adequado para ventilação</li>
+                                    <li>Remoção de folhas velhas e restos culturais</li>
+                                    <li>Calda bordalesa ou sulfato de cobre (uso criterioso)</li>
+                                    <li>Biofungicidas à base de Trichoderma</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Doenças Bacterianas -->
+                    <div class="col-md-6">
+                        <div class="card h-100 border-danger-subtle">
+                            <div class="card-header bg-danger-subtle fw-bold">
+                                <i class="bi bi-droplet me-1"></i>Doenças Bacterianas
+                            </div>
+                            <div class="card-body small">
+                                <p><strong>Sinais típicos:</strong> Manchas angulares encharcadas, exsudação viscosa, podridão mole com odor.</p>
+                                <p><strong>Exemplos no DF:</strong></p>
+                                <ul class="mb-2 ps-3">
+                                    <li><strong>Podridão mole (Erwinia):</strong> Tecidos aquosos e malcheirosos (alface, beterraba)</li>
+                                    <li><strong>Mancha bacteriana (Pseudomonas):</strong> Manchas angulares com halo amarelo (tomate, pimentão)</li>
+                                </ul>
+                                <p><strong>Prevenção e controle:</strong></p>
+                                <ul class="mb-0 ps-3">
+                                    <li>Evitar trabalho no campo com folhas molhadas</li>
+                                    <li>Desinfetar ferramentas entre plantas</li>
+                                    <li>Usar sementes tratadas termicamente</li>
+                                    <li>Eliminar plantas infectadas imediatamente</li>
+                                    <li>Rotacionar culturas por 2-3 anos</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Doenças Virais -->
+                    <div class="col-md-6">
+                        <div class="card h-100 border-info-subtle">
+                            <div class="card-header bg-info-subtle fw-bold">
+                                <i class="bi bi-shuffle me-1"></i>Doenças Virais
+                            </div>
+                            <div class="card-body small">
+                                <p><strong>Sinais típicos:</strong> Mosaico (manchas amarelo/verde), enrolamento, nanismo, brotos deformados.</p>
+                                <p><strong>Exemplos no DF:</strong></p>
+                                <ul class="mb-2 ps-3">
+                                    <li><strong>Vírus do mosaico do tomate (ToMV)</strong></li>
+                                    <li><strong>Vírus Y da batata (transmitido por pulgões)</strong></li>
+                                </ul>
+                                <p><strong>Prevenção e controle:</strong></p>
+                                <ul class="mb-0 ps-3">
+                                    <li>Controlar vetores (pulgões, mosca-branca, trips)</li>
+                                    <li>Usar variedades resistentes quando disponíveis</li>
+                                    <li>Eliminar plantas hospedeiras alternativas (ervas daninhas)</li>
+                                    <li>Redes de proteção contra insetos em cultivos protegidos</li>
+                                    <li><strong>Atenção:</strong> Não há cura — plantas infectadas devem ser removidas</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Anomalias Fisiológicas -->
+                    <div class="col-md-6">
+                        <div class="card h-100 border-secondary-subtle">
+                            <div class="card-header bg-secondary-subtle fw-bold">
+                                <i class="bi bi-exclamation-circle me-1"></i>Anomalias Fisiológicas (Abióticas)
+                            </div>
+                            <div class="card-body small">
+                                <p><strong>Causas comuns no DF:</strong></p>
+                                <ul class="mb-2 ps-3">
+                                    <li><strong>Deficiência de cálcio:</strong> Pontas murchas em alface/beterraba ("tip burn")</li>
+                                    <li><strong>Estresse hídrico:</strong> Murcha, amarelamento de bordas, crescimento lento</li>
+                                    <li><strong>Excesso de irrigação:</strong> Apodrecimento de raízes, murcha vascular</li>
+                                    <li><strong>Queimadura química:</strong> Lesões foliares por erro de aplicação de defensivos</li>
+                                    <li><strong>Deriva de herbicida:</strong> Deformações em brotos de plantas sensíveis</li>
+                                </ul>
+                                <p><strong>Como evitar:</strong></p>
+                                <ul class="mb-0 ps-3">
+                                    <li>Análise de solo e foliar periódica</li>
+                                    <li>Irrigação adequada à cultura e ao solo</li>
+                                    <li>Calibrar equipamentos de aplicação</li>
+                                    <li>Aplicar defensivos em horários frescos e sem vento</li>
+                                    <li>Manter registro de todas as intervenções</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert alert-warning mt-3 mb-0">
+                    <i class="bi bi-exclamation-triangle me-2"></i>
+                    <strong>Lembre-se:</strong> Sintomas semelhantes podem ter causas diferentes. Um amarelamento pode ser deficiência de nitrogênio (abiótico) ou ataque de pulgões (biótico). Use o diagnóstico passo a passo e, na dúvida, consulte um técnico.
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Controle Agroecológico -->
+        <section class="card mb-4 border-0 shadow-sm" id="controle">
+            <div class="card-header bg-success text-white">
+                <h3 class="h5 mb-0"><i class="bi bi-shield-check me-2"></i>Estratégias de Controle Agroecológico</h3>
+            </div>
+            <div class="card-body">
+                <p class="text-muted small mb-3">
+                    Priorize sempre os métodos menos agressivos. A hierarquia do MIP: <strong>Prevenção → Controle Cultural/Biológico → Biopesticidas → Químicos de baixo impacto (último recurso)</strong>.
+                </p>
+
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <div class="card h-100 border-success-subtle">
+                            <div class="card-header bg-success-subtle fw-bold">
+                                <i class="bi bi-tree me-1"></i>Prevenção (Base)
+                            </div>
+                            <div class="card-body small">
+                                <ul class="mb-0 ps-3">
+                                    <li>Selecionar variedades resistentes adaptadas ao Cerrado</li>
+                                    <li>Rotação de culturas para quebrar ciclos de pragas</li>
+                                    <li>Saneamento: remover restos culturais e plantas daninhas</li>
+                                    <li>Solo saudável: compostagem, adubação verde, cobertura morta</li>
+                                    <li>Diversificação: consórcios e bordaduras floridas atraem inimigos naturais</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card h-100 border-primary-subtle">
+                            <div class="card-header bg-primary-subtle fw-bold">
+                                <i class="bi bi-recycle me-1"></i>Controle Cultural/Físico
+                            </div>
+                            <div class="card-body small">
+                                <ul class="mb-0 ps-3">
+                                    <li>Ajustar época de plantio para evitar picos de praga</li>
+                                    <li>Cobertura morta para suprimir ervas e regular umidade</li>
+                                    <li>Coleta manual de lagartas e insetos maiores</li>
+                                    <li>Redes de proteção contra insetos e pássaros</li>
+                                    <li>Armadilhas adesivas coloridas (amarelas para mosca-branca/pulgões)</li>
+                                    <li>Armadilhas de fermentação para moscas-das-frutas</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card h-100 border-info-subtle">
+                            <div class="card-header bg-info-subtle fw-bold">
+                                <i class="bi bi-flask me-1"></i>Biopesticidas e Extratos
+                            </div>
+                            <div class="card-body small">
+                                <ul class="mb-0 ps-3">
+                                    <li><strong>Bacillus thuringiensis (Bt):</strong> Eficaz contra lagartas</li>
+                                    <li><strong>Beauveria bassiana:</strong> Fungo entomopatogênico para insetos adultos</li>
+                                    <li><strong>Óleo de neem:</strong> Ação repelente, antialimentar e reguladora de crescimento</li>
+                                    <li><strong>Extratos vegetais:</strong> Alho, pimenta, crisântemo (testar em pequena escala primeiro)</li>
+                                    <li><strong>Sabão potássico:</strong> Controle de sugadores (pulgões, ácaros)</li>
+                                    <li><strong>Óleo mineral:</strong> Asfixia de ovos e insetos de corpo mole</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tabela Resumo de Controle -->
+                <div class="table-responsive mt-3">
+                    <table class="table table-climate table-bordered align-middle mb-0">
+                        <thead>
+                            <tr>
+                                <th>Estratégia</th>
+                                <th>Custo</th>
+                                <th>Complexidade</th>
+                                <th>Melhor Para</th>
+                                <th>Precaução</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Armadilhas adesivas amarelas</strong></td>
+                                <td class="text-success fw-bold">Baixo</td>
+                                <td>Baixa</td>
+                                <td>Monitoramento e redução de mosca-branca/pulgões</td>
+                                <td>Trocar a cada 15 dias ou quando saturar</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Bacillus thuringiensis (Bt)</strong></td>
+                                <td class="text-warning fw-bold">Médio</td>
+                                <td>Média</td>
+                                <td>Lagartas mastigadoras em hortaliças</td>
+                                <td>Aplicar ao entardecer; eficaz apenas em lagartas jovens</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Óleo de neem</strong></td>
+                                <td class="text-warning fw-bold">Médio</td>
+                                <td>Média</td>
+                                <td>Controle preventivo de sugadores e ácaros</td>
+                                <td>Não aplicar em pleno sol para evitar fitotoxicidade</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Calda de sabão potássico</strong></td>
+                                <td class="text-success fw-bold">Baixo</td>
+                                <td>Baixa</td>
+                                <td>Controle emergencial de pulgões e ácaros</td>
+                                <td>Usar sabão neutro; testar em poucas plantas primeiro</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Solarização do solo</strong></td>
+                                <td class="text-success fw-bold">Baixo</td>
+                                <td>Média</td>
+                                <td>Redução de nematoides e patógenos de solo</td>
+                                <td>Requer 4-6 semanas sem cultivo; planejar com antecedência</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="info-highlight mt-3">
+                    <h6 class="fw-bold text-success mb-2"><i class="bi bi-lightbulb me-1"></i>Receita Caseira: Calda de Sabão Potássico</h6>
+                    <p class="small mb-0">
+                        <strong>Ingredientes:</strong> 10g de sabão potássico (ou sabão de coco neutro) + 1L de água morna. <br>
+                        <strong>Preparo:</strong> Dissolver bem o sabão na água. Deixar esfriar. <br>
+                        <strong>Aplicação:</strong> Pulverizar na face inferior das folhas, ao final da tarde. Repetir a cada 5-7 dias se necessário. <br>
+                        <strong>Atenção:</strong> Testar em 2-3 plantas antes de aplicar em toda a área. Não misturar com outros produtos sem orientação técnica.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Checklist de Campo -->
+        <section class="card mb-4 border-0 shadow-sm" id="checklist">
+            <div class="card-header bg-primary text-white">
+                <h3 class="h5 mb-0"><i class="bi bi-clipboard-check me-2"></i>Checklist de Inspeção Semanal</h3>
+            </div>
+            <div class="card-body">
+                <p class="text-muted small mb-3">
+                    Use este checklist durante suas visitas ao campo. Marque os itens observados e registre ações tomadas.
+                </p>
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="card h-100 border-primary-subtle">
+                            <div class="card-header bg-primary-subtle fw-bold">🔍 Inspeção Visual</div>
+                            <div class="card-body small">
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk1">
+                                    <label class="form-check-label" for="chk1">Face inferior das folhas inspecionada (pulgões, ácaros, ovos)</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk2">
+                                    <label class="form-check-label" for="chk2">Brotos novos verificados (sintomas de vírus, deformações)</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk3">
+                                    <label class="form-check-label" for="chk3">Base das plantas e solo observados (formigas, podridões)</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk4">
+                                    <label class="form-check-label" for="chk4">Frutos e flores examinados (manchas, larvas, deformações)</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk5">
+                                    <label class="form-check-label" for="chk5">Armadilhas adesivas verificadas e registradas</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100 border-success-subtle">
+                            <div class="card-header bg-success-subtle fw-bold">✅ Ações Preventivas</div>
+                            <div class="card-body small">
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk6">
+                                    <label class="form-check-label" for="chk6">Cobertura do solo mantida (palha, adubo verde)</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk7">
+                                    <label class="form-check-label" for="chk7">Plantas daninhas removidas (evitar hospedeiros alternativos)</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk8">
+                                    <label class="form-check-label" for="chk8">Ferramentas limpas e desinfetadas entre usos</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk9">
+                                    <label class="form-check-label" for="chk9">Plantas doentes/remanescentes removidas adequadamente</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk10">
+                                    <label class="form-check-label" for="chk10">Registro feito: data, sintoma, ação, resultado observado</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert alert-success mt-3 mb-0">
+                    <strong>Dica de ouro:</strong> Tire fotos dos sintomas com seu celular (de perto e de longe) e anote a data. Isso ajuda no diagnóstico próprio e facilita a consulta técnica quando necessário.
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Ajuda Técnica -->
+        <section class="card mb-4 border-0 shadow-sm" id="ajuda">
+            <div class="card-header bg-dark text-white">
+                <h3 class="h5 mb-0"><i class="bi bi-people me-2"></i>Canais de Apoio Técnico no DF</h3>
+            </div>
+            <div class="card-body">
+                <p class="text-muted small mb-3">
+                    Não hesite em buscar ajuda. Instituições públicas oferecem suporte gratuito ou a baixo custo para pequenos produtores.
+                </p>
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="institution-card">
+                            <h5 class="fw-bold text-success mb-2">
+                                <i class="bi bi-building me-1"></i>Emater-DF
+                            </h5>
+                            <p class="small mb-2">
+                                <strong>O que oferece:</strong> Assistência técnica personalizada, diagnóstico de campo, treinamentos, orientação sobre MIP e BPA.
+                            </p>
+                            <p class="small mb-2">
+                                <strong>Como acessar:</strong>
+                            </p>
+                            <ul class="small mb-0 ps-3">
+                                <li>Site: <a href="https://www.emater.df.gov.br" target="_blank" class="text-decoration-none">emater.df.gov.br</a></li>
+                                <li>Procure o escritório regional mais próximo</li>
+                                <li>Agende visita técnica para diagnóstico in loco</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="institution-card">
+                            <h5 class="fw-bold text-success mb-2">
+                                <i class="bi bi-flower1 me-1"></i>Embrapa Hortaliças
+                            </h5>
+                            <p class="small mb-2">
+                                <strong>O que oferece:</strong> Pesquisa aplicada, variedades resistentes, publicações técnicas, guias de manejo para o Cerrado.
+                            </p>
+                            <p class="small mb-2">
+                                <strong>Como acessar:</strong>
+                            </p>
+                            <ul class="small mb-0 ps-3">
+                                <li>Site: <a href="https://www.embrapa.br/hortalicas" target="_blank" class="text-decoration-none">embrapa.br/hortalicas</a></li>
+                                <li>Biblioteca online com guias gratuitos</li>
+                                <li>Eventos e dias de campo abertos ao público</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="institution-card">
+                            <h5 class="fw-bold text-primary mb-2">
+                                <i class="bi bi-book me-1"></i>FAO / Guias Internacionais
+                            </h5>
+                            <p class="small mb-2">
+                                <strong>O que oferece:</strong> Manuais de MIP para tomate, pepino, couve e outras hortaliças, com experiências globais adaptáveis.
+                            </p>
+                            <p class="small mb-2">
+                                <strong>Como acessar:</strong>
+                            </p>
+                            <ul class="small mb-0 ps-3">
+                                <li>Repositório FAO: <a href="https://openknowledge.fao.org" target="_blank" class="text-decoration-none">openknowledge.fao.org</a></li>
+                                <li>Busque por "IPM" + nome da cultura</li>
+                                <li>Disponível em português e outros idiomas</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="institution-card">
+                            <h5 class="fw-bold text-info mb-2">
+                                <i class="bi bi-flask me-1"></i>Laboratórios de Análise
+                            </h5>
+                            <p class="small mb-2">
+                                <strong>O que oferece:</strong> Diagnóstico preciso de solo, folha, patógenos e pragas via análise laboratorial.
+                            </p>
+                            <p class="small mb-2">
+                                <strong>Como acessar:</strong>
+                            </p>
+                            <ul class="small mb-0 ps-3">
+                                <li>Solicite indicação à Emater-DF</li>
+                                <li>Coleta correta de amostras é essencial (siga orientações)</li>
+                                <li>Resultados embasam decisões de correção e manejo</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert alert-info mt-3 mb-0">
+                    <i class="bi bi-info-circle me-2"></i>
+                    <strong>Antes de consultar:</strong> Leve amostras (folhas, solo, insetos em frasco), fotos dos sintomas, histórico da área (culturas anteriores, aplicações recentes) e anote suas dúvidas. Isso torna a assistência mais eficiente.
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Glossário -->
+        <section class="card mb-4 border-0 shadow-sm" id="glossario">
+            <div class="card-header bg-secondary text-white">
+                <h3 class="h5 mb-0"><i class="bi bi-book-half me-2"></i>Glossário Essencial de MIP</h3>
+            </div>
+            <div class="card-body">
+                <div class="row g-0">
+                    <div class="col-md-6 pe-md-3">
+                        <div class="border-bottom py-2 small"><strong>MIP:</strong> Manejo Integrado de Pragas — estratégia que combina métodos preventivos, culturais, biológicos e químicos de forma racional.</div>
+                        <div class="border-bottom py-2 small"><strong>Nível econômico de dano:</strong> Densidade populacional da praga a partir da qual o prejuízo financeiro justifica a intervenção.</div>
+                        <div class="border-bottom py-2 small"><strong>Inimigos naturais:</strong> Organismos que controlam pragas (predadores como joaninhas; parasitoides como vespas).</div>
+                        <div class="border-bottom py-2 small"><strong>BPA:</strong> Boas Práticas Agrícolas — conjunto de ações para produção segura e sustentável.</div>
+                        <div class="border-bottom py-2 small"><strong>Sinal:</strong> Presença visível do agente causador (fungo, inseto, bactéria).</div>
+                        <div class="border-bottom py-2 small"><strong>Sintoma:</strong> Alteração na planta causada por estresse biótico ou abiótico.</div>
+                    </div>
+                    <div class="col-md-6 ps-md-3">
+                        <div class="border-bottom py-2 small"><strong>Biopesticida:</strong> Produto derivado de organismos vivos (bactérias, fungos, plantas) para controle de pragas.</div>
+                        <div class="border-bottom py-2 small"><strong>Solarização:</strong> Técnica que usa calor solar (solo coberto com plástico) para reduzir patógenos e pragas do solo.</div>
+                        <div class="border-bottom py-2 small"><strong>Armadilha adesiva:</strong> Superfície colorida e pegajosa para monitorar e capturar insetos voadores.</div>
+                        <div class="border-bottom py-2 small"><strong>Rotação de culturas:</strong> Alternar espécies no mesmo local para quebrar ciclos de pragas e doenças.</div>
+                        <div class="border-bottom py-2 small"><strong>Consórcio:</strong> Cultivar duas ou mais espécies juntas para benefícios mútuos (controle de pragas, uso eficiente do espaço).</div>
+                        <div class="py-2 small"><strong>Fumagina:</strong> Fungo preto que cresce sobre a melada excretada por pulgões e mosca-branca.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Alerta Final -->
+        <div class="alert alert-warning d-flex align-items-center shadow-sm">
+            <i class="bi bi-exclamation-triangle fs-3 me-3"></i>
+            <div>
+                <strong>Atenção:</strong> Este guia é uma ferramenta de apoio visual e educativo. Diagnósticos complexos, surtos severos ou dúvidas persistentes exigem consulta com profissional habilitado (engenheiro agrônomo, técnico da Emater-DF). A agricultura é dinâmica — adapte as recomendações à realidade da sua propriedade, registrando resultados para aprimorar suas práticas a cada ciclo.
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="py-5 bg-light border-top">
+        <div class="container text-center">
+            <p class="text-muted fw-bold mb-1">Guia Verde – 2026</p>
+
+            <div class="small text-muted">
+                Fontes e instituições de referência:
+                <a href="https://www.embrapa.br" target="_blank" rel="noopener" class="text-decoration-none text-secondary">Embrapa</a> |
+                <a href="https://www.emater.df.gov.br" target="_blank" rel="noopener" class="text-decoration-none text-secondary">Emater-DF</a> |
+                <a href="https://openknowledge.fao.org" target="_blank" rel="noopener" class="text-decoration-none text-secondary">FAO</a> |
+                <a href="https://www.agritempo.gov.br" target="_blank" rel="noopener" class="text-decoration-none text-secondary">Agritempo</a>
+            </div>
+
+            <div class="small text-muted mt-2">
+                Conteúdo baseado no guia "Jardinagem Inteligente: Guia Visual de Manejo Integrado para Pequenos Produtores Rurais", adaptado para hortaliças do Distrito Federal e Cerrado. Foco em práticas agroecológicas, diagnóstico visual e controle sustentável de pragas e doenças.
+            </div>
+
+            <div class="small text-muted mt-2">
+                Este conteúdo foi desenvolvido como parte de um projeto extensivo do curso de Análise e Desenvolvimento de Sistemas, com o objetivo de criar um guia prático e acessível para produtores rurais, estudantes e entusiastas da agricultura. Não possuindo fins comerciais, o Guia Verde é uma iniciativa educacional que visa disseminar conhecimento técnico de forma clara e objetiva, contribuindo para a melhoria das práticas agrícolas e a sustentabilidade no campo.
+            </div>
+        </div>
+    </footer>
+
+    <button 
+        type="button"
+        class="btn btn-success btn-floating btn-lg"
+        id="btn-back-to-top"
+        style="position: fixed; bottom: 20px; right: 20px; display: none; z-index: 1000;"
+        aria-label="Voltar ao topo"
+        title="Voltar ao topo">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/ui-extras.js"></script>
+    <script>
+        // Filtro por cultura
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.crop-filter-btn');
+            const pestCards = document.querySelectorAll('.pest-card');
+
+            filterButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Atualiza botões ativos
+                    filterButtons.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const selectedCrop = this.dataset.crop;
+                    
+                    // Filtra cards
+                    pestCards.forEach(card => {
+                        if (selectedCrop === 'all' || card.dataset.crops.includes(selectedCrop)) {
+                            card.style.display = '';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Botão voltar ao topo
+            const backToTopBtn = document.getElementById('btn-back-to-top');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    backToTopBtn.style.display = 'block';
+                } else {
+                    backToTopBtn.style.display = 'none';
+                }
+            });
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>

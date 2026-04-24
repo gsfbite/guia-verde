@@ -16,67 +16,367 @@ body {
 }
 
 /* --- Componentes de Card (Unificados) --- */
-.climate-card, .species-card {
+.climate-card,
+.species-card,
+.pest-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-left: 4px solid var(--cerrado-green);
     height: 100%;
 }
 
-.climate-card:hover, .species-card:hover {
+.pest-card {
+    cursor: pointer;
+}
+
+.climate-card:hover,
+.species-card:hover,
+.pest-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.15) !important;
 }
 
-.climate-icon, .species-icon {
+.climate-icon,
+.species-icon {
     font-size: 2.5rem;
     color: var(--cerrado-green);
 }
 
-/* --- Badges e Riscos --- */
-.risk-badge { font-size: 0.75rem; padding: 0.35rem 0.6rem; font-weight: 600; }
-.risk-critical { background: #dc3545; color: white; }
-.risk-high { background: #fd7e14; color: white; } /* Comum aos dois arquivos */
-.risk-medium { background: #ffc107; color: #212529; }
-.risk-low { background: #198754; color: white; }
+/* --- Badges, Sintomas, Controles e Riscos --- */
+.risk-badge {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.6rem;
+    font-weight: 600;
+}
+
+.risk-critical {
+    background: #dc3545;
+    color: white;
+}
+
+.risk-high {
+    background: #fd7e14;
+    color: white;
+}
+
+.risk-medium {
+    background: #ffc107;
+    color: #212529;
+}
+
+.risk-low {
+    background: #198754;
+    color: white;
+}
+
+.symptom-tag {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    margin: 2px;
+    display: inline-block;
+}
+
+.symptom-biotic {
+    background: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #81c784;
+}
+
+.symptom-abiotic {
+    background: #fff3e0;
+    color: #ef6c00;
+    border: 1px solid #ffb74d;
+}
+
+.control-badge {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.6rem;
+}
+
+.control-low {
+    background: #c8e6c9;
+    color: #1b5e20;
+}
+
+.control-medium {
+    background: #fff9c4;
+    color: #f57f17;
+}
+
+.control-high {
+    background: #ffcdd2;
+    color: #b71c1c;
+}
+
+/* --- Filtros e Botões --- */
+.crop-filter-btn {
+    margin: 2px;
+    font-size: 0.8rem;
+}
+
+.crop-filter-btn.active {
+    background: #198754 !important;
+    color: white !important;
+}
+
+.quick-action-btn {
+    width: 100%;
+    text-align: left;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.quick-action-btn:hover {
+    background: #e8f5e9;
+}
 
 /* --- Indicadores e Boxes --- */
-.season-box { background: linear-gradient(135deg, rgba(135,206,235,0.15) 0%, rgba(45,80,22,0.1) 100%); border-radius: 8px; padding: 1rem; margin: 0.5rem 0; border: 1px solid rgba(45,80,22,0.2); }
-.wet-season { border-left: 4px solid #2196f3; }
-.dry-season { border-left: 4px solid #ff9800; }
+.season-box {
+    background: linear-gradient(135deg, rgba(135,206,235,0.15) 0%, rgba(45,80,22,0.1) 100%);
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border: 1px solid rgba(45,80,22,0.2);
+}
 
-.temp-meter, .impact-meter { height: 10px; background: #e9ecef; border-radius: 5px; overflow: hidden; margin: 0.5rem 0; }
-.temp-fill, .impact-fill { height: 100%; border-radius: 5px; transition: width 0.6s ease; }
+.wet-season {
+    border-left: 4px solid #2196f3;
+}
 
-.temp-optimal, .impact-low { background: linear-gradient(90deg, #198754, #20c997); }
-.temp-warning, .impact-medium { background: linear-gradient(90deg, #ffc107, #fd7e14); }
-.temp-critical, .impact-high { background: linear-gradient(90deg, #dc3545, #fd7e14); }
+.dry-season {
+    border-left: 4px solid #ff9800;
+}
 
-.control-method { background: var(--cerrado-sand); border-radius: 8px; padding: 0.75rem; margin: 0.25rem 0; font-size: 0.9rem; }
-.ecology-box { background: #e8f5e9; border-left: 3px solid var(--cerrado-green); padding: 1rem; border-radius: 0 4px 4px 0; margin: 0.5rem 0; }
+.temp-meter,
+.impact-meter {
+    height: 10px;
+    background: #e9ecef;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 0.5rem 0;
+}
+
+.temp-fill,
+.impact-fill {
+    height: 100%;
+    border-radius: 5px;
+    transition: width 0.6s ease;
+}
+
+.temp-optimal,
+.impact-low {
+    background: linear-gradient(90deg, #198754, #20c997);
+}
+
+.temp-warning,
+.impact-medium {
+    background: linear-gradient(90deg, #ffc107, #fd7e14);
+}
+
+.temp-critical,
+.impact-high {
+    background: linear-gradient(90deg, #fd7e14, #dc3545);
+}
+
+.control-method {
+    background: var(--cerrado-sand);
+    border-radius: 8px;
+    padding: 0.75rem;
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+}
+
+.ecology-box {
+    background: #e8f5e9;
+    border-left: 3px solid var(--cerrado-green);
+    padding: 1rem;
+    border-radius: 0 4px 4px 0;
+    margin: 0.5rem 0;
+}
+
+.visual-diagnosis {
+    background: #f8f9fa;
+    border-left: 4px solid #198754;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.alert-mip {
+    border-left: 4px solid #198754;
+}
+
+/* --- Etapas e Severidade --- */
+.step-number {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #198754;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-right: 8px;
+}
+
+.severity-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 4px;
+}
+
+.severity-critical {
+    background: #dc3545;
+}
+
+.severity-high {
+    background: #fd7e14;
+}
+
+.severity-medium {
+    background: #ffc107;
+}
+
+.severity-low {
+    background: #28a745;
+}
+
+/* --- Imagens e Cards Institucionais --- */
+.climate-visual,
+.species-image-placeholder {
+    background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    margin: 0.5rem 0;
+}
+
+.pest-image-placeholder {
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    border: 2px dashed #81c784;
+    border-radius: 8px;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2e7d32;
+    font-size: 0.85rem;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.institution-card {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.institution-card:hover {
+    border-color: #198754;
+    box-shadow: 0 2px 8px rgba(25,135,84,0.15);
+}
 
 /* --- Elementos Globais --- */
-.navbar { background: linear-gradient(135deg, var(--cerrado-green) 0%, var(--cerrado-green-dark) 100%) !important; }
+.navbar {
+    background: linear-gradient(135deg, var(--cerrado-green) 0%, var(--cerrado-green-dark) 100%) !important;
+}
 
-.accordion-button:not(.collapsed) { background-color: rgba(45, 80, 22, 0.1); color: var(--cerrado-green); font-weight: 600; }
+.accordion-button:not(.collapsed) {
+    background-color: rgba(45, 80, 22, 0.1);
+    color: var(--cerrado-green);
+    font-weight: 600;
+}
 
-.table-climate th, .table-species th { background: var(--cerrado-green); color: white; font-weight: 600; }
-.table-climate tr:hover, .table-species tr:hover { background: rgba(45, 80, 22, 0.05); }
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
+}
 
-.btn-cerrado { background: var(--cerrado-green); border-color: var(--cerrado-green); color: white; transition: all 0.3s ease; }
-.btn-cerrado:hover { background: var(--cerrado-green-dark); border-color: var(--cerrado-green-dark); transform: translateY(-2px); }
+.table-climate th,
+.table-species th,
+.table-diagnosis th {
+    background: var(--cerrado-green);
+    color: white;
+    font-weight: 600;
+}
 
-.info-highlight { background: linear-gradient(135deg, rgba(25,135,84,0.1) 0%, rgba(32,201,151,0.1) 100%); border: 1px solid rgba(25,135,84,0.3); border-radius: 8px; padding: 1rem; margin: 1rem 0; }
+.table-climate tr:hover,
+.table-species tr:hover {
+    background: rgba(45, 80, 22, 0.05);
+}
 
-.climate-visual, .species-image-placeholder { background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%); border-radius: 8px; padding: 1rem; text-align: center; margin: 0.5rem 0; }
+.table-diagnosis td {
+    vertical-align: middle;
+}
 
-.month-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0.5rem; margin: 1rem 0; }
-.month-item { background: white; border: 1px solid #dee2e6; border-radius: 4px; padding: 0.5rem; text-align: center; font-size: 0.75rem; }
-.month-rain { background: rgba(33,150,243,0.15); border-color: #2196f3; }
-.month-dry { background: rgba(255,152,0,0.15); border-color: #ff9800; }
+.btn-cerrado {
+    background: var(--cerrado-green);
+    border-color: var(--cerrado-green);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.btn-cerrado:hover {
+    background: var(--cerrado-green-dark);
+    border-color: var(--cerrado-green-dark);
+    transform: translateY(-2px);
+}
+
+.info-highlight {
+    background: linear-gradient(135deg, rgba(25,135,84,0.1) 0%, rgba(32,201,151,0.1) 100%);
+    border: 1px solid rgba(25,135,84,0.3);
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+/* --- Grid de Meses --- */
+.month-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.month-item {
+    background: white;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 0.75rem;
+}
+
+.month-rain {
+    background: rgba(33,150,243,0.15);
+    border-color: #2196f3;
+}
+
+.month-dry {
+    background: rgba(255,152,0,0.15);
+    border-color: #ff9800;
+}
 
 /* --- Responsividade --- */
 @media (max-width: 768px) {
-    .climate-card, .species-card { margin-bottom: 1rem; }
-    .table-responsive { font-size: 0.85rem; }
-    .month-grid { grid-template-columns: repeat(3, 1fr); }
+    .climate-card,
+    .species-card {
+        margin-bottom: 1rem;
+    }
+
+    .table-responsive {
+        font-size: 0.85rem;
+    }
+
+    .crop-filter-btn {
+        width: 100%;
+        margin: 2px 0;
+    }
+
+    .month-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
