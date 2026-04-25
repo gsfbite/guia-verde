@@ -133,7 +133,7 @@
         },
         {
             titulo: "Principais Culturas",
-            link: "src/pages/culturas/principal.html",
+            link: "src/pages/catalogos/culturas.html",
             categoria: "cultura",
             descricao: "Veja a lista completa de todas as culturas disponíveis no Guia Verde.",
             icone: "bi-grid",
@@ -435,7 +435,7 @@
                 semResultadosTexto.innerHTML =
                     'Não encontramos nada relacionado a "<strong>' + query + '</strong>". ' +
                     'Tente termos como "praga", "tomate", "nutrição" ou "clima". ' +
-                    'Ou ainda, confira a <a href="' + montarUrl('src/pages/culturas/principal.html') + '">lista completa de culturas</a>. ' +
+                    'Ou ainda, confira a <a href="' + montarUrl('src/pages/catalogos/culturas.html') + '">lista completa de culturas</a>. ' +
                     'Se preferir, acesse nossa <a href="' + montarUrl('index.html') + '">página principal</a>.';
                 return;
             }

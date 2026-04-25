@@ -1096,44 +1096,5 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../../js/ui-extras.js"></script>
-    <script>
-        // Filtro por cultura
-        document.addEventListener('DOMContentLoaded', function() {
-            const filterButtons = document.querySelectorAll('.crop-filter-btn');
-            const pestCards = document.querySelectorAll('.pest-card');
-
-            filterButtons.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    // Atualiza botões ativos
-                    filterButtons.forEach(b => b.classList.remove('active'));
-                    this.classList.add('active');
-                    
-                    const selectedCrop = this.dataset.crop;
-                    
-                    // Filtra cards
-                    pestCards.forEach(card => {
-                        if (selectedCrop === 'all' || card.dataset.crops.includes(selectedCrop)) {
-                            card.style.display = '';
-                        } else {
-                            card.style.display = 'none';
-                        }
-                    });
-                });
-            });
-
-            // Botão voltar ao topo
-            const backToTopBtn = document.getElementById('btn-back-to-top');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 300) {
-                    backToTopBtn.style.display = 'block';
-                } else {
-                    backToTopBtn.style.display = 'none';
-                }
-            });
-            backToTopBtn.addEventListener('click', () => {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-        });
-    </script>
 </body>
 </html>
