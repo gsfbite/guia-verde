@@ -28,7 +28,7 @@ Focando em performance e compatibilidade com dispositivos móveis (Mobile-First)
 
 ## Como acessar o produto?
 Você pode acessar a página inicial do projeto por meio do link abaixo (Você será redirecionado para um link pages oficial do GitHub!)
-* [Acessar Site](https://gsf-permutado.github.io/guia-verde/) - Site Oficial do Projeto
+* [Acessar Site](https://gsfbite.github.io/guia-verde/) - Site Oficial do Projeto
 
 ---
 > **Nota de Extensão:** Este projeto é desenvolvido como parte do curso de Análise e Desenvolvimento de Sistemas (ADS), buscando integrar conhecimento técnico acadêmico às necessidades da comunidade agrícola local.
